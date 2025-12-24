@@ -9,9 +9,6 @@ const extractReadingTime = (html = "") => {
 const cleanDescription = (html = "") =>
   html.replace(/<span class="span-reading-time[\s\S]*?<\/span>/, "").trim();
 
-const cleanExcerpt = (html = "") =>
-  html.replace(/<span class="span-reading-time[\s\S]*?<\/span>/, "").trim();
-
 const formatDate = (date: string) =>
   new Date(date).toLocaleDateString("en-IN", {
     day: "numeric",
@@ -26,9 +23,6 @@ export default function PostCard({
   post: PostMeta;
   basePath?: string;
 }) {
-  const readingTime = extractReadingTime(post.description ?? "");
-  const description = cleanDescription(post.description ?? "");
-
   return (
     <div className="w-[30%]" key={post.slug}>
       <article className="text-[#1D0652] text-[20px] ">
