@@ -4,13 +4,13 @@ import matter from "gray-matter";
 import { marked } from "marked";
 import { Post, PostMeta } from "./types";
 
-const postsDir = path.join(process.cwd(), "app/blog/content/posts");
+const postsDir = path.join(process.cwd(), "src/app/blog/content/posts");
 
 // ------------------------------------------
 // Helper: Calculate Read Time
 // ------------------------------------------
 function calculateReadTime(content: string): string {
-  const wordsPerMinute = 200;
+  const wordsPerMinute = 275;
   const words = content.trim().split(/\s+/).length;
   const minutes = Math.ceil(words / wordsPerMinute);
   return `${minutes} min read`;

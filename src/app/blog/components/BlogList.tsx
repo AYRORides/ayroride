@@ -31,7 +31,7 @@ export default function BlogList({
     startTransition(async () => {
       const { posts: newPosts, totalPages } = await loadMoreAction(
         nextPage,
-        12
+        6
       );
       setPosts((prev) => [...prev, ...newPosts]);
       setPage(nextPage);
@@ -40,9 +40,9 @@ export default function BlogList({
   };
 
   return (
-    <>
+    <div className="flex flex-col w-full items-center">
       {/* 3x3 Grid Layout */}
-      <div className="flex w-[1240px] flex-wrap gap-x-10 gap-y-10 !ml-auto !mr-auto ">
+      <div className="flex max-w-[1240px] w-full flex-wrap gap-x-5 gap-y-10 mx-auto justify-center md:justify-start">
         {posts.map((post) => (
           <PostCard key={post.slug} post={post} basePath={basePath} />
         ))}
@@ -50,16 +50,23 @@ export default function BlogList({
 
       {/* Load More Button */}
       {hasMore && (
-        <div className="flex justify-center mt-12 md:mt-20">
+        <div className="flex justify-center w-full mb-20" style={{ marginTop: '60px' }}>
           <button
             onClick={loadMore}
             disabled={isPending}
-            className="blue-cta disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-[#423DF9] text-white border border-[#423DF9] hover:bg-transparent hover:text-[#423DF9] font-bold text-[16px] leading-[20px] transition-colors duration-300 shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+            style={{
+              fontFamily: '"Open Sans", sans-serif',
+              padding: '13px 36px',
+              borderRadius: '8px',
+              borderWidth: '1px',
+              borderStyle: 'solid'
+            }}
           >
-            {isPending ? "Loading..." : "Load More"}
+            {isPending ? "Loading..." : "View More"}
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 }

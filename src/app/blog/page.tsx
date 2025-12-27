@@ -1,42 +1,57 @@
 import { getPaginatedPosts } from "@/lib/posts";
 import BlogList from "@/app/blog/components/BlogList";
 import { fetchMorePosts } from "../blog/actions";
-//import SimpleForm from "@/components/SimpleForm";
+import styles from "./page.module.css";
 
-export default async function DataExamplePage({
+export default async function BlogPage({
   searchParams,
 }: {
   searchParams: Promise<{ page?: string }>;
 }) {
   const params = await searchParams;
   const page = Number(params.page) || 1;
-  const limit = 12;
+  const limit = 6;
   const { posts, totalPages } = await getPaginatedPosts(page, limit);
 
   return (
-    <div className="pt-32 md:pt-40 pb-10 md:pb-25 px-4 md:px-0">
-      <h1
-        className="text-center font-semibold mb-8 md:mb-16"
-        style={{
-          fontFamily: '"Inter", Sans-serif',
-          fontSize: "clamp(36px, 8vw, 60px)",
-          fontWeight: 600,
-          color: "#000000",
-        }}
-      >
-        Our Blogs
-      </h1>
+    <>
+      {/* Hero Section */}
+      <section className={styles.blogHero}>
+        <h1 className={styles.heroTitle}>
+          Our <span>Blogs</span>
+        </h1>
+      </section>
 
-      <BlogList
-        initialPosts={posts}
-        initialTotalPages={totalPages}
-        basePath="/blog"
-        loadMoreAction={fetchMorePosts}
-      />
+      {/* Two-Tone Divider */}
+      <div className={styles.sectionDivider}>
+        <div className={styles.dividerContainer}>
+          <div className={styles.dividerTeal}></div>
+          <div className={styles.dividerBlue}></div>
+        </div>
+      </div>
 
-      {/* <div className="mt-16">
-                <SimpleForm />
-            </div> */}
-    </div>
+      {/* Blog Intro Section */}
+      <section className={styles.blogIntro}>
+        <div className={styles.blogIntroContainer}>
+          <div className={styles.blogBadge}>OUR BLOGS</div>
+          <h2 className={styles.blogIntroTitle}>
+            Insights and Updates from <span>PikUP</span>
+          </h2>
+          <p className={styles.blogIntroSubtitle}>
+            Stay informed with the latest news, trends, and expert advice from our team. Our blog covers a wide range of topics to help your business thrive.
+          </p>
+        </div>
+      </section>
+
+      {/* Blog Content Section */}
+      <div className={styles.blogContent}>
+        <BlogList
+          initialPosts={posts}
+          initialTotalPages={totalPages}
+          basePath="/blog"
+          loadMoreAction={fetchMorePosts}
+        />
+      </div>
+    </>
   );
 }
