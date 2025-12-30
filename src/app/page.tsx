@@ -3,6 +3,7 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import TestimonialsSlider from "@/components/TestimonialsSlider";
 import ReferAndEarn from "@/components/ReferAndEarn";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -65,7 +66,9 @@ export default function Home() {
             <p>
               Join our waitlist. Refer your friends. Win valuable prizes.
             </p>
-            <button className={styles.waitlistBtn}>Join Our Waitlist</button>
+            <Link href="/join-our-waitlist">
+              <button className={styles.waitlistBtn}>Join Our Waitlist</button>
+            </Link>
           </div>
           <div className={styles.promoImageContainer}>
             <img
@@ -103,7 +106,9 @@ export default function Home() {
             <p className={styles.boldDescription}>
               It's ridesharing reinvented.
             </p>
-            <button className={styles.waitlistBtn}>Join Our Waitlist</button>
+            <Link href="/join-our-waitlist">
+              <button className={styles.waitlistBtn}>Join Our Waitlist</button>
+            </Link>
           </div>
         </div>
       </section>
@@ -196,9 +201,11 @@ export default function Home() {
             </div>
           </div>
 
-          <button className={`${styles.waitlistBtn} ${styles.differentBtn}`}>
-            Join Our Waitlist
-          </button>
+          <Link href="/join-our-waitlist">
+            <button className={`${styles.waitlistBtn} ${styles.differentBtn}`}>
+              Join Our Waitlist
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -219,9 +226,11 @@ export default function Home() {
             <span className={styles.rewardHighlight}>
               $1,000 cash, ride credits, or a MacBook Pro.
             </span>
-            <button className={styles.waitlistBtn}>
-              Join Our Waitlist
-            </button>
+            <Link href="/join-our-waitlist">
+              <button className={styles.waitlistBtn}>
+                Join Our Waitlist
+              </button>
+            </Link>
           </div>
           <div className={styles.rewardImageSide}>
             <img
@@ -263,9 +272,11 @@ export default function Home() {
           </div>
 
           <div className={styles.futureBtnContainer}>
-            <button className={`${styles.waitlistBtn} ${styles.differentBtn}`}>
-              Join Our Waitlist
-            </button>
+            <Link href="/join-our-waitlist">
+              <button className={`${styles.waitlistBtn} ${styles.differentBtn}`}>
+                Join Our Waitlist
+              </button>
+            </Link>
           </div>
         </div>
       </section>

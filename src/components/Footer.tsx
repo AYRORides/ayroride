@@ -1,20 +1,31 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isWaitlistPage = pathname === "/join-our-waitlist";
+
   return (
     <div className={styles.footerWrapper}>
       {/* CTA Section */}
-      <section className={styles.ctaContainer}>
-        <div className={styles.ctaSection}>
-          <div className={styles.ctaContent}>
-            <h2 className={styles.ctaTitle}>Ready To Disrupt Ride-Sharing Status Quo?</h2>
-            <p className={styles.ctaSubtitle}>
-              Be an early adopter and earn rewards while helping to make ride-sharing more fairer for everyone.
-            </p>
-            <button className={styles.ctaBtn}>Join Our Waitlist</button>
+      {!isWaitlistPage && (
+        <section className={styles.ctaContainer}>
+          <div className={styles.ctaSection}>
+            <div className={styles.ctaContent}>
+              <h2 className={styles.ctaTitle}>Ready To Disrupt Ride-Sharing Status Quo?</h2>
+              <p className={styles.ctaSubtitle}>
+                Be an early adopter and earn rewards while helping to make ride-sharing more fairer for everyone.
+              </p>
+              <Link href="/join-our-waitlist">
+                <button className={styles.ctaBtn}>Join Our Waitlist</button>
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
 
       {/* Two Color Divider */}
@@ -29,7 +40,7 @@ export default function Footer() {
       <footer className={styles.mainFooter}>
         <div className={styles.footerContent}>
           <div className={styles.footerTop}>
-            <div className={styles.footerBrand}>
+            <Link href="/" className={styles.footerBrand}>
               <img
                 src="https://pikup.us/wp-content/uploads/2025/11/purple_svg.svg"
                 alt="PikUP"
@@ -37,15 +48,15 @@ export default function Footer() {
               />
               <div className={styles.brandDivider}></div>
               <p className={styles.brandSlogan}>Save Max. Earn Max.</p>
-            </div>
+            </Link>
 
             <div className={styles.footerNav}>
               <ul className={styles.navLinks}>
-                <li><a href="https://pikup.us/">Home</a></li>
-                <li><a href="https://pikup.us/about-us/">About Us</a></li>
-                <li><a href="https://pikup.us/services/">Services</a></li>
-                <li><a href="https://pikup.us/blog/">Blog</a></li>
-                <li><a href="https://pikup.us/contact-us/">Contact Us</a></li>
+                <li><Link href="/">Home</Link></li>
+                <li><Link href="/about-us">About Us</Link></li>
+                <li><Link href="/services">Services</Link></li>
+                <li><Link href="/blog">Blog</Link></li>
+                <li><Link href="/contact-us">Contact Us</Link></li>
               </ul>
               <div className={styles.socialIcons}>
                 {/* Facebook */}
@@ -107,9 +118,9 @@ export default function Footer() {
           <div className={styles.footerBottom}>
             <p className={styles.copyrightText}>Copyright PikUP 2025. All Rights Reserved.</p>
             <div className={styles.legalLinks}>
-              <a href="https://pikup.us/terms-of-service/">Terms of Service</a>
+              <Link href="/terms-of-service">Terms of Service</Link>
               <span className={styles.legalDivider}>|</span>
-              <a href="https://pikup.us/privacy-policy/">Privacy Policy</a>
+              <Link href="/privacy-policy">Privacy Policy</Link>
             </div>
           </div>
         </div>
