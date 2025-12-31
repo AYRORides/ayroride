@@ -17,6 +17,21 @@ function calculateReadTime(content: string): string {
 }
 
 // ------------------------------------------
+// Helper: Clean Excerpt
+// ------------------------------------------
+function cleanExcerpt(htmlContent: string): string {
+  return htmlContent
+    // Remove inner spans first (labels and time) to avoid regex nesting issues
+    .replace(/<span[^>]*class="[^"]*rt-label[^"]*"[^>]*>[\s\S]*?<\/span>/gi, "")
+    .replace(/<span[^>]*class="[^"]*rt-time[^"]*"[^>]*>[\s\S]*?<\/span>/gi, "")
+    // Remove the wrapper span (now safe to match as inner spans are gone)
+    .replace(/<span[^>]*class="[^"]*span-reading-time[^"]*"[^>]*>[\s\S]*?<\/span>/gi, "")
+    // Remove all remaining HTML tags
+    .replace(/<[^>]+>/g, "")
+    .trim();
+}
+
+// ------------------------------------------
 // Get all posts (DEPRECATED/REMOVED)
 // ------------------------------------------
 export function getAllPosts(): PostMeta[] {
@@ -43,7 +58,7 @@ export async function getApiPostBySlug(slug: string): Promise<Post> {
           month: "long",
           day: "numeric",
         }),
-        description: post.excerpt.rendered.replace(/<[^>]+>/g, ""),
+        description: cleanExcerpt(post.excerpt.rendered),
         featuredImage:
           post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null,
         tags: [], // Tags handling could be added if needed
@@ -103,7 +118,7 @@ export async function getPostBySlug(slug: string): Promise<Post> {
           month: "long",
           day: "numeric",
         }),
-        description: post.excerpt.rendered.replace(/<[^>]+>/g, ""),
+        description: cleanExcerpt(post.excerpt.rendered),
         featuredImage:
           post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null,
         tags: [], // Tags handling could be added if needed
@@ -166,7 +181,7 @@ export async function getPaginatedPosts(
         month: "long",
         day: "numeric",
       }),
-      description: post.excerpt.rendered.replace(/<[^>]+>/g, ""),
+      description: cleanExcerpt(post.excerpt.rendered),
       featuredImage:
         post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null,
       tags: [], // Tags handling could be added if needed

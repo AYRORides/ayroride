@@ -8,7 +8,6 @@ const extractReadingTime = (html = "") => {
 
 const cleanDescription = (html = "") =>
   html
-    .replace(/<span class="span-reading-time[\s\S]*?<\/span>/, "")
     .replace(/&#8230;/g, "...")
     .replace(/&hellip;/g, "...")
     .replace(/<[^>]*>/g, "") // Remove remaining HTML tags
