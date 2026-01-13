@@ -32,7 +32,12 @@ const ContactForm = () => {
             const data = await response.json();
 
             if (!response.ok) {
-                throw new Error(data.error + (data.details ? `: ${data.details}` : '') || 'Something went wrong');
+                // Show all error details for debugging
+                let errorMsg = data.error || 'Something went wrong';
+                if (data.details) errorMsg += ` | Details: ${data.details}`;
+                if (data.code) errorMsg += ` | Code: ${data.code}`;
+                if (data.sqlMessage) errorMsg += ` | SQL: ${data.sqlMessage}`;
+                throw new Error(errorMsg);
             }
 
             setStatus('success');
