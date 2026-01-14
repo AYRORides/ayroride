@@ -34,7 +34,13 @@ export default function JoinOurWaitlist() {
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                     __html: `
-            !function(m,a,i,t,r,e){if(m.RH)return;r=m.RH={},r.uuid=t,r.loaded=0,r.d=m.document,r.u="https://referralhero.com/assets/widgets/referralhero.js",r.l=function(){var a,t;return m.document.getElementById("referralhero-js")?void 0:(a=m.document.createElement("script"),a.type="text/javascript",a.id="referralhero-js",a.async=!0,a.src=r.u,t=m.document.getElementsByTagName("script")[0],void t.parentNode.insertBefore(a,t))},r.l(),m.addEventListener("load",function(){r.loaded=1})}(window,document,"script","MF2f0c6063df");
+            !function(m,a,i,t,r,e){if(m.RH)return;r=m.RH={},r.uuid
+            =t,r.loaded=0,r.base_url=i,r.queue=[],m.rht=function()
+            {r.queue.push(arguments)};e=a.getElementsByTagName('script')
+            [0],c=a.createElement('script');c.async=!0,c.src=
+            'https://d7zve4d3u0dfm.cloudfront.net/'+'production'+
+            '/'+t+'.js',e.parentNode.insertBefore(c,e)}(window,document,
+            'https://app.referralhero.com','MF2f0c6063df');
           `,
                 }}
             />

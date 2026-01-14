@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import pool from '../../../lib/db';
-import { RowDataPacket } from 'mysql2';
+import { ResultSetHeader } from 'mysql2';
 
 export async function POST(request: Request) {
     try {
@@ -14,13 +14,13 @@ export async function POST(request: Request) {
             );
         }
 
-        const [result] = await pool.execute<RowDataPacket[]>(
+        const [result] = await pool.execute<ResultSetHeader>(
             'INSERT INTO contact_messages (name, company, phone, email, subject, message) VALUES (?, ?, ?, ?, ?, ?)',
             [name, company || null, phone || null, email, subject || null, message]
         );
 
         return NextResponse.json(
-            { message: 'Message sent successfully', id: (result as any).insertId },
+            { message: 'Message sent successfully', id: result.insertId },
             { status: 201 }
         );
 
