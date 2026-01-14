@@ -13,9 +13,12 @@ export async function POST(request: Request) {
         }
 
         // ReferralHero API Configuration
-        const RH_API_KEY = '2b684fdeb10b5615ea4fb2c5ef71c3f3c5590e1b';
-        const CAMPAIGN_UUID = 'MF2f0c6063df';
-        const RH_ENDPOINT = `https://app.referralhero.com/api/v2/lists/${CAMPAIGN_UUID}/subscribers`;
+        const RH_API_KEY = process.env.REFERRALHERO_API_KEY;
+        const CAMPAIGN_UUID = 'MF2f0c6063df'; // UUID is generally safe to be public or hardcoded as it's often in client-side widgets, but cleaner in env.
+        // Actually, let's put UUID in env too for consistency.
+        const RH_UUID = process.env.REFERRALHERO_UUID || 'MF2f0c6063df';
+
+        const RH_ENDPOINT = `https://app.referralhero.com/api/v2/lists/${RH_UUID}/subscribers`;
 
         const response = await fetch(RH_ENDPOINT, {
             method: 'POST',
