@@ -73,7 +73,7 @@ export default function JoinOurWaitlist() {
                             <div>
                                 <input
                                     type="text"
-                                    placeholder="Full Name"
+                                    placeholder="Full Name*"
                                     className={styles.inputField}
                                     value={formData.name}
                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -83,20 +83,33 @@ export default function JoinOurWaitlist() {
                             <div>
                                 <input
                                     type="email"
-                                    placeholder="Email Address"
+                                    placeholder="Email Address*"
                                     className={styles.inputField}
                                     value={formData.email}
                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                     required
                                 />
                             </div>
-                            <div>
+                            <div className={styles.phoneRow}>
+                                <select className={styles.countrySelect}>
+                                    <option value="+1">+1</option>
+                                    <option value="+44">+44</option>
+                                    <option value="+91">+91</option>
+                                    <option value="+61">+61</option>
+                                    <option value="+86">+86</option>
+                                    <option value="+81">+81</option>
+                                    <option value="+49">+49</option>
+                                    <option value="+33">+33</option>
+                                    <option value="+55">+55</option>
+                                    <option value="+52">+52</option>
+                                </select>
                                 <input
                                     type="tel"
-                                    placeholder="Phone Number (Optional)"
-                                    className={styles.inputField}
+                                    placeholder="Your Phone Number*"
+                                    className={styles.phoneInput}
                                     value={formData.phone}
                                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                    required
                                 />
                             </div>
 
@@ -114,8 +127,11 @@ export default function JoinOurWaitlist() {
                                 className={styles.submitBtn}
                                 disabled={status === 'loading'}
                             >
-                                {status === 'loading' ? 'Joining...' : 'Join Waitlist'}
+                                {status === 'loading' ? 'Joining...' : 'Join The Waitlist'}
                             </button>
+                            <p className={styles.disclaimer}>
+                                By joining, you agree to receive updates about the referral program
+                            </p>
                         </form>
                     </div>
                 </div>
