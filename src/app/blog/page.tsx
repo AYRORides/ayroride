@@ -15,7 +15,7 @@ export const metadata = {
         url: "/assets/OG.png",
         width: 1200,
         height: 630,
-        alt: "PikUP Blog",
+        alt: "Ayro Blog",
       },
     ],
   },
