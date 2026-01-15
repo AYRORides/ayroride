@@ -938,7 +938,38 @@
 /* Refer and Earn Section Styles */
 .referSection {
   background-color: #FFFFFF;
-  padding: 40px 20px;
+  padding: 80px 20px;
+}
+
+.referContent {
+  max-width: 1240px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.referText {
+  margin-bottom: 50px;
+}
+
+.referText h2 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1D0652;
+  margin-bottom: 15px;
+}
+
+.referText p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(17, 17, 17, 0.75);
+  text-align: center;
+  margin: 0;
 }
 
 .referContainer {
@@ -971,6 +1002,7 @@
 .referFormWrapper {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .referForm {
@@ -1064,6 +1096,54 @@
   color: #1111117f;
   text-align: center;
   margin: 0;
+}
+
+/* User Type Radio Buttons */
+.userTypeSection {
+  width: 100%;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.userTypeLabel {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: #111111;
+  margin-bottom: 12px;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #111111;
+}
+
+.radioInput {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #423DF9;
+  -webkit-appearance: radio;
+  appearance: radio;
+  margin: 0;
+}
+
+.radioInput:checked {
+  accent-color: #423DF9;
+}
+
+.radioLabel span {
+  user-select: none;
 }
 
 /* Stats Section */

@@ -2,10 +2,10 @@ import ContactForm from "./ContactFormClient";
 import styles from "./contact-us.module.css";
 
 export const metadata = {
-  title: "Contact Us - pikup.us",
+  title: "Contact Us - Ayro",
   description: "We would love to hear from you. Whether you have questions, need assistance, or want to discuss your business needs, our team is here to help.",
   openGraph: {
-    title: "Contact Us - pikup.us",
+    title: "Contact Us - Ayro",
     description: "We would love to hear from you. Whether you have questions, need assistance, or want to discuss your business needs, our team is here to help.",
     url: "https://pikup.us/contact-us/",
     images: [
@@ -13,13 +13,13 @@ export const metadata = {
         url: "/assets/OG.png",
         width: 1200,
         height: 630,
-        alt: "Contact PikUP",
+        alt: "Contact Ayro",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Us - pikup.us",
+    title: "Contact Us - Ayro",
     description: "Questions? Need assistance? Our team is here to help.",
   },
 };
@@ -42,7 +42,7 @@ export default function Contact() {
       <section className={styles.formSection}>
         <div className={styles.formContainer}>
           <div className={styles.formHeader}>
-            <h2 className={styles.formTitle}>Get in Touch with <span>PikUP</span></h2>
+            <h2 className={styles.formTitle}>Get in Touch with <span>Ayro</span></h2>
             <p className={styles.formSubtitle}>
               We would love to hear from you. Whether you have questions, need assistance, or
               want to discuss your business needs, our team is here to help.
@@ -57,7 +57,7 @@ export default function Contact() {
           <div className={styles.infoTextSide}>
             <h3 className={styles.infoTitle}>Contact <span className={styles.tealText}>Information</span></h3>
             <p className={styles.infoDesc}>
-              PikUP is building a fair and transparent ride share system that protects both riders and drivers.
+              Ayro is building a fair and transparent ride share system that protects both riders and drivers.
               No surge pricing, no surprises. Our referral program rewards Early Adopters for helping us grow
               a community where riders pay less and drivers earn what they deserve.
             </p>
@@ -101,7 +101,7 @@ export default function Contact() {
                 <a href="https://x.com/pikup26698" target="_blank" className={styles.socialIcon}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.66634 1.33325C5.25185 1.33325 3.8953 1.89516 2.89511 2.89535C1.89491 3.89554 1.33301 5.2521 1.33301 6.66659V25.3333C1.33301 26.7477 1.89491 28.1043 2.89511 29.1045C3.8953 30.1047 5.25185 30.6666 6.66634 30.6666H25.333C26.7475 30.6666 28.104 30.1047 29.1042 29.1045C30.1044 28.1043 30.6663 26.7477 30.6663 25.3333V6.66659C30.6663 5.2521 30.1044 3.89554 29.1042 2.89535C28.104 1.89516 26.7475 1.33325 25.333 1.33325H6.66634ZM6.22101 5.99992C6.07505 6.05416 5.94378 6.14174 5.83764 6.25568C5.73151 6.36961 5.65345 6.50676 5.60968 6.6562C5.56591 6.80563 5.55764 6.96322 5.58554 7.11641C5.61343 7.26961 5.67671 7.41417 5.77034 7.53859L13.2557 17.4719L5.36901 25.9319L5.31034 25.9999H8.03967L14.4797 19.0946L19.429 25.6653C19.5438 25.8173 19.6997 25.9335 19.8783 25.9999H25.7743C25.9201 25.9454 26.0511 25.8576 26.1569 25.7435C26.2628 25.6295 26.3405 25.4923 26.384 25.3429C26.4275 25.1935 26.4356 25.036 26.4075 24.8829C26.3794 24.7299 26.316 24.5855 26.2223 24.4613L18.737 14.5279L26.689 5.99992H23.9557L17.5157 12.9066L12.5637 6.33592C12.449 6.18333 12.2931 6.06675 12.1143 5.99992H6.22101ZM20.7277 24.0639L8.57434 7.93592H11.2663L23.4183 24.0626L20.7277 24.0639Z" fill="#08D9C4"></path></svg>
                 </a>
-                <a href="https://www.youtube.com/@PikUPInc-2025" target="_blank" className={styles.socialIcon}>
+                <a href="https://www.youtube.com/@AyroInc-2025" target="_blank" className={styles.socialIcon}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="27" height="22" viewBox="0 0 27 22" fill="none"><path d="M13.6587 0C14.3707 0.004 16.152 0.0213333 18.0453 0.0973333L18.7173 0.126666C20.6227 0.216 22.5267 0.370667 23.472 0.633333C24.732 0.988 25.7213 2.02 26.056 3.32933C26.5893 5.40933 26.656 9.46533 26.664 10.448L26.6653 10.6507V10.8827C26.656 11.8653 26.5893 15.9227 26.056 18.0013C25.7173 19.3147 24.7267 20.348 23.472 20.6973C22.5267 20.96 20.6227 21.1147 18.7173 21.204L18.0453 21.2347C16.152 21.3093 14.3707 21.328 13.6587 21.3307L13.3453 21.332H13.0053C11.4987 21.3227 5.19733 21.2547 3.192 20.6973C1.93333 20.3427 0.942667 19.3107 0.608 18.0013C0.0746668 15.9213 0.008 11.8653 0 10.8827V10.448C0.008 9.46533 0.0746668 5.408 0.608 3.32933C0.946667 2.016 1.93733 0.982666 3.19333 0.634666C5.19733 0.0759998 11.5 0.008 13.0067 0H13.6587ZM10.6653 6V15.3333L18.6653 10.6667L10.6653 6Z" fill="#08D9C4"></path></svg>
                 </a>
               </div>

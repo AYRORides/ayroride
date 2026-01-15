@@ -20,7 +20,7 @@ export default function Header() {
         <Link href="/" className={styles.brand}>
           <img
             src="/Ayro_Secondary_1.png"
-            alt="PikUP"
+            alt="Ayro"
             className={styles.logo}
           />
         </Link>

@@ -8,7 +8,8 @@ export default function ReferAndEarn() {
         name: "",
         email: "",
         countryCode: "+1",
-        phone: ""
+        phone: "",
+        userType: "Rider"
     });
 
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -28,7 +29,8 @@ export default function ReferAndEarn() {
                 body: JSON.stringify({
                     email: formData.email,
                     phone: `${formData.countryCode}${formData.phone}`,
-                    name: formData.name
+                    name: formData.name,
+                    userType: formData.userType
                 })
             });
 
@@ -36,7 +38,7 @@ export default function ReferAndEarn() {
 
             if (res.ok) {
                 setStatus('success');
-                setFormData({ name: "", email: "", phone: "", countryCode: "+1" });
+                setFormData({ name: "", email: "", phone: "", countryCode: "+1", userType: "Rider" });
             } else {
                 console.error("Submission failed:", data);
                 setStatus('error');
@@ -51,75 +53,110 @@ export default function ReferAndEarn() {
         <section className={styles.referSection}>
             <div className={styles.referContent}>
                 <div className={styles.referText}>
-                    <h2>Refer and Earn</h2>
-                    <p>Refer your friends to become a driver and earn $500. $20 for every rider you refer.</p>
+                    <h2>Refer and <span style={{ color: '#423DF9' }}>Earn</span></h2>
+                    <p>Join the waitlist now and get your unique referral link</p>
                 </div>
                 <div className={styles.referFormWrapper}>
-                    {status === 'success' ? (
-                        <div style={{ padding: '40px', textAlign: 'center', color: '#423DF9', background: 'white', borderRadius: '37px' }}>
-                            <h3 style={{ fontSize: '24px', marginBottom: '10px' }}>You're on the list! 🚀</h3>
-                            <p>Thanks for joining. We'll be in touch soon.</p>
-                            <button
-                                onClick={() => setStatus('idle')}
-                                style={{ marginTop: '20px', padding: '10px 20px', background: '#423DF9', color: 'white', border: 'none', borderRadius: '50px', cursor: 'pointer' }}
+                    <form className={styles.referForm} onSubmit={handleSubmit}>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Full Name"
+                            className={styles.referInput}
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email Address"
+                            className={styles.referInput}
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+                        <div className={styles.phoneRow}>
+                            <select
+                                name="countryCode"
+                                className={styles.countrySelect}
+                                value={formData.countryCode}
+                                onChange={handleChange}
                             >
-                                Refer Another Friend
-                            </button>
+                                <option value="+1">+1 (US)</option>
+                                <option value="+44">+44 (UK)</option>
+                                <option value="+91">+91 (IN)</option>
+                                <option value="+86">+86 (CN)</option>
+                                <option value="+63">+63 (PH)</option>
+                                <option value="+84">+84 (VN)</option>
+                                {/* Add more codes as needed */}
+                            </select>
+                            <input
+                                type="tel"
+                                name="phone"
+                                placeholder="Phone Number"
+                                className={styles.phoneInput}
+                                value={formData.phone}
+                                onChange={handleChange}
+                                required
+                            />
                         </div>
-                    ) : (
-                        <form className={styles.referForm} onSubmit={handleSubmit}>
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Full Name"
-                                className={styles.referInput}
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-                            />
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Email Address"
-                                className={styles.referInput}
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
-                            />
-                            <div className={styles.phoneRow}>
-                                <select
-                                    name="countryCode"
-                                    className={styles.countrySelect}
-                                    value={formData.countryCode}
-                                    onChange={handleChange}
-                                >
-                                    <option value="+1">+1 (US)</option>
-                                    <option value="+44">+44 (UK)</option>
-                                    <option value="+91">+91 (IN)</option>
-                                    <option value="+86">+86 (CN)</option>
-                                    <option value="+63">+63 (PH)</option>
-                                    <option value="+84">+84 (VN)</option>
-                                    {/* Add more codes as needed */}
-                                </select>
-                                <input
-                                    type="tel"
-                                    name="phone"
-                                    placeholder="Phone Number"
-                                    className={styles.phoneInput}
-                                    value={formData.phone}
-                                    onChange={handleChange}
-                                    required
-                                />
+
+                        {/* Radio Buttons for User Type */}
+                        <div className={styles.userTypeSection}>
+                            <label className={styles.userTypeLabel}>Are you interested in signing up as?</label>
+                            <div className={styles.radioGroup}>
+                                <label className={styles.radioLabel}>
+                                    <input
+                                        type="radio"
+                                        name="userType"
+                                        value="Rider"
+                                        checked={formData.userType === "Rider"}
+                                        onChange={handleChange}
+                                        className={styles.radioInput}
+                                    />
+                                    <span>Rider</span>
+                                </label>
+                                <label className={styles.radioLabel}>
+                                    <input
+                                        type="radio"
+                                        name="userType"
+                                        value="Driver"
+                                        checked={formData.userType === "Driver"}
+                                        onChange={handleChange}
+                                        className={styles.radioInput}
+                                    />
+                                    <span>Driver</span>
+                                </label>
+                                <label className={styles.radioLabel}>
+                                    <input
+                                        type="radio"
+                                        name="userType"
+                                        value="Rider & Driver"
+                                        checked={formData.userType === "Rider & Driver"}
+                                        onChange={handleChange}
+                                        className={styles.radioInput}
+                                    />
+                                    <span>Rider & Driver</span>
+                                </label>
                             </div>
-                            <button type="submit" className={styles.referSubmitBtn} disabled={status === 'loading'}>
-                                {status === 'loading' ? 'Joining...' : 'Join Waitlist'}
-                            </button>
-                            {status === 'error' && <p style={{ color: 'red', marginTop: '10px', textAlign: 'center' }}>Something went wrong. Please try again.</p>}
-                            <p className={styles.referDisclaimer}>
-                                By clicking, you agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.
+                        </div>
+
+                        <button type="submit" className={styles.referSubmitBtn} disabled={status === 'loading'}>
+                            {status === 'loading' ? 'Joining...' : 'Join Waitlist'}
+                        </button>
+
+                        {status === 'success' && (
+                            <p style={{ color: '#08D9C4', marginTop: '10px', textAlign: 'center', fontWeight: '600' }}>
+                                ✓ Thank you for joining!
                             </p>
-                        </form>
-                    )}
+                        )}
+                        {status === 'error' && <p style={{ color: 'red', marginTop: '10px', textAlign: 'center' }}>Something went wrong. Please try again.</p>}
+
+                        <p className={styles.referDisclaimer}>
+                            By clicking, you agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.
+                        </p>
+                    </form>
                 </div>
             </div>
         </section>
