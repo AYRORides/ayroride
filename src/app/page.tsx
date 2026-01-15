@@ -59,7 +59,7 @@ export default function Home() {
         <div className={styles.promoContainer}>
           <div className={styles.promoText}>
             <h1>
-              <span className={styles.mainHead}>PikUP ride</span> <span className={styles.sharingText}>sharing means</span>
+              <span className={styles.mainHead}>Ayro ride</span> <span className={styles.sharingText}>sharing means</span>
               <span className={styles.blueText}>
                 {displayText}
               </span>
@@ -74,7 +74,7 @@ export default function Home() {
           <div className={styles.promoImageContainer}>
             <img
               src="/images/promo-bg.png"
-              alt="PikUP ridesharing"
+              alt="Ayro ridesharing"
               className={styles.promoImage}
             />
           </div>
@@ -98,7 +98,7 @@ export default function Home() {
             />
           </div>
           <div className={styles.fixingTextSide}>
-            <h2>PikUP is fixing <br className={styles.mobileBreak} /> everything <span>you hate <br className={styles.mobileBreak} /> about ridesharing.</span></h2>
+            <h2>Ayro is fixing <br className={styles.mobileBreak} /> everything <span>you hate <br className={styles.mobileBreak} /> about ridesharing.</span></h2>
             <p className={styles.subHeading}>Sick of surge pricing? Tired of feeling unsafe?</p>
             <p className={styles.highlightText}>We're changing all that.</p>
             <p className={styles.description}>
@@ -180,7 +180,7 @@ export default function Home() {
 
       <section className={styles.differentSection}>
         <div className={styles.differentContainer}>
-          <h3 className={styles.differentTitle}>How is <span>PikUP different?</span></h3>
+          <h3 className={styles.differentTitle}>How is <span>Ayro different?</span></h3>
 
           <div className={styles.differentGrid}>
             <div className={styles.differentItem}>
@@ -218,7 +218,7 @@ export default function Home() {
               <span className={styles.blueSpan}><span style={{ color: '#1D0652' }}>the</span> Rideshare <br className={styles.mobileBreak} /> Revolution</span>
             </h2>
             <p className={styles.rewardDescription}>
-              Join the PikUP waitlist now, and you'll unlock your unique referral link
+              Join the Ayro waitlist now, and you'll unlock your unique referral link
               and to get updates about our launch in early 2026.
             </p>
             <p className={`${styles.rewardDescription} ${styles.rewardShareLine}`}>

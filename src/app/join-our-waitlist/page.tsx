@@ -7,7 +7,9 @@ export default function JoinOurWaitlist() {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        phone: ""
+        phone: "",
+        countryCode: "+1",
+        userType: "Rider"
     });
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState("");
@@ -23,7 +25,12 @@ export default function JoinOurWaitlist() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    phone: `${formData.countryCode}${formData.phone}`,
+                    userType: formData.userType
+                }),
             });
 
             const data = await response.json();
@@ -33,7 +40,7 @@ export default function JoinOurWaitlist() {
             }
 
             setStatus('success');
-            setFormData({ name: "", email: "", phone: "" });
+            setFormData({ name: "", email: "", phone: "", countryCode: "+1", userType: "Rider" });
         } catch (error: any) {
             setStatus('error');
             setErrorMessage(error.message);
@@ -91,7 +98,11 @@ export default function JoinOurWaitlist() {
                                 />
                             </div>
                             <div className={styles.phoneRow}>
-                                <select className={styles.countrySelect}>
+                                <select
+                                    className={styles.countrySelect}
+                                    value={formData.countryCode}
+                                    onChange={(e) => setFormData({ ...formData, countryCode: e.target.value })}
+                                >
                                     <option value="+1">+1</option>
                                     <option value="+44">+44</option>
                                     <option value="+91">+91</option>
@@ -113,14 +124,45 @@ export default function JoinOurWaitlist() {
                                 />
                             </div>
 
-                            {status === 'error' && (
-                                <p style={{ color: 'red', textAlign: 'center' }}>{errorMessage}</p>
-                            )}
-                            {status === 'success' && (
-                                <p style={{ color: 'green', textAlign: 'center', fontWeight: 'bold' }}>
-                                    You have successfully joined the waitlist! check your email.
-                                </p>
-                            )}
+                            {/* Radio Buttons for User Type */}
+                            <div className={styles.userTypeSection}>
+                                <label className={styles.userTypeLabel}>Are you interested in signing up as?</label>
+                                <div className={styles.radioGroup}>
+                                    <label className={styles.radioLabel}>
+                                        <input
+                                            type="radio"
+                                            name="userType"
+                                            value="Rider"
+                                            checked={formData.userType === "Rider"}
+                                            onChange={(e) => setFormData({ ...formData, userType: e.target.value })}
+                                            className={styles.radioInput}
+                                        />
+                                        <span>Rider</span>
+                                    </label>
+                                    <label className={styles.radioLabel}>
+                                        <input
+                                            type="radio"
+                                            name="userType"
+                                            value="Driver"
+                                            checked={formData.userType === "Driver"}
+                                            onChange={(e) => setFormData({ ...formData, userType: e.target.value })}
+                                            className={styles.radioInput}
+                                        />
+                                        <span>Driver</span>
+                                    </label>
+                                    <label className={styles.radioLabel}>
+                                        <input
+                                            type="radio"
+                                            name="userType"
+                                            value="Rider & Driver"
+                                            checked={formData.userType === "Rider & Driver"}
+                                            onChange={(e) => setFormData({ ...formData, userType: e.target.value })}
+                                            className={styles.radioInput}
+                                        />
+                                        <span>Rider & Driver</span>
+                                    </label>
+                                </div>
+                            </div>
 
                             <button
                                 type="submit"
@@ -129,6 +171,16 @@ export default function JoinOurWaitlist() {
                             >
                                 {status === 'loading' ? 'Joining...' : 'Join The Waitlist'}
                             </button>
+
+                            {status === 'success' && (
+                                <p style={{ color: '#08D9C4', textAlign: 'center', fontWeight: '600', marginTop: '10px' }}>
+                                    ✓ Thank you for joining!
+                                </p>
+                            )}
+                            {status === 'error' && (
+                                <p style={{ color: 'red', textAlign: 'center' }}>{errorMessage}</p>
+                            )}
+
                             <p className={styles.disclaimer}>
                                 By joining, you agree to receive updates about the referral program
                             </p>

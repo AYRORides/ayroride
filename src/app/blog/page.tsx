@@ -4,10 +4,10 @@ import { fetchMorePosts } from "../blog/actions";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Insights and Updates from PikUP",
+  title: "Insights and Updates from Ayro",
   description: "Stay informed with the latest news, trends, and expert advice from our team. Our blog covers a wide range of topics to help your business thrive.",
   openGraph: {
-    title: "Insights and Updates from PikUP",
+    title: "Insights and Updates from Ayro",
     description: "Stay informed with the latest news, trends, and expert advice from our team. Our blog covers a wide range of topics to help your business thrive.",
     url: "https://pikup.us/blog/",
     images: [

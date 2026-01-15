@@ -62,7 +62,7 @@ export async function getApiPostBySlug(slug: string): Promise<Post> {
         featuredImage:
           post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null,
         tags: [], // Tags handling could be added if needed
-        author: post._embedded?.["author"]?.[0]?.name || "pikup Team",
+        author: post._embedded?.["author"]?.[0]?.name || "Ayro Team",
         categories:
           post._embedded?.["wp:term"]?.[0]?.map((term: any) => term.name) || [],
         readTime: calculateReadTime(post.content.rendered),
@@ -94,7 +94,7 @@ export async function getPostBySlug(slug: string): Promise<Post> {
       description: data.description,
       featuredImage: data.featuredImage || null,
       tags: data.tags || [],
-      author: data.author || "pikup Team",
+      author: data.author || "Ayro Team",
       categories: data.categories || [],
       readTime: calculateReadTime(content),
       content: htmlContent,
@@ -122,7 +122,7 @@ export async function getPostBySlug(slug: string): Promise<Post> {
         featuredImage:
           post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null,
         tags: [], // Tags handling could be added if needed
-        author: post._embedded?.["author"]?.[0]?.name || "pikup Team",
+        author: post._embedded?.["author"]?.[0]?.name || "Ayro Team",
         categories:
           post._embedded?.["wp:term"]?.[0]?.map((term: any) => term.name) || [],
         readTime: calculateReadTime(post.content.rendered),
@@ -185,7 +185,7 @@ export async function getPaginatedPosts(
       featuredImage:
         post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null,
       tags: [], // Tags handling could be added if needed
-      author: post._embedded?.["author"]?.[0]?.name || "pikup Team",
+      author: post._embedded?.["author"]?.[0]?.name || "Ayro Team",
       categories:
         post._embedded?.["wp:term"]?.[0]?.map((term: any) => term.name) || [],
       readTime: calculateReadTime(post.content.rendered),
@@ -275,7 +275,7 @@ export async function getPostsByAuthor(
   const allPosts = [...allLocalPosts, ...apiPosts];
 
   return allPosts.filter((post) => {
-    const slugifiedAuthor = (post.author || "pikup Team")
+    const slugifiedAuthor = (post.author || "Ayro Team")
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/(^-|-$)+/g, "");
@@ -343,7 +343,7 @@ export async function getApiPostsByAuthor(
   const { posts: apiPosts } = await getPaginatedPosts(1, 100);
 
   return apiPosts.filter((post) => {
-    const slugifiedAuthor = (post.author || "pikup Team")
+    const slugifiedAuthor = (post.author || "Ayro Team")
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/(^-|-$)+/g, "");

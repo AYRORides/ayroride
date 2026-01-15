@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Params) {
       title: post.title,
       description: post.description || "Default description",
       url: `https://pikup.us/blog/${slug}`,
-      siteName: "pikup.us",
+      siteName: "Ayro",
       images: [
         {
           url: post.featuredImage || "https://pikup.us/assets/OG.png",

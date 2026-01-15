@@ -21,7 +21,7 @@ const faqData = [
         answer: "The referral program is available to early adopters for a limited time. Join now to maximize your earning potential and secure your early adopter status."
     },
     {
-        question: "How does PikUP eliminate surge pricing?",
+        question: "How does Ayro eliminate surge pricing?",
         answer: "Our model creates predictable pricing by building a large user base first, then launching with transparent fares that fairly compensate drivers without exploiting riders during peak times."
     }
 ];
@@ -39,7 +39,7 @@ export default function FAQAccordion() {
                 {/* Left Side - Title and Description */}
                 <div className={styles.faqLeft}>
                     <h3 className={styles.faqTitle}>
-                        Frequently Asked Questions <span>About PikUP</span>
+                        Frequently Asked Questions <span>About Ayro</span>
                     </h3>
                     <p className={styles.faqSubtitle}>
                         Find answers to frequently asked questions about our referral program and rewards system.

@@ -198,6 +198,55 @@
     margin: 0;
 }
 
+/* User Type Radio Buttons */
+.userTypeSection {
+    width: 100%;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.userTypeLabel {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    color: #111111;
+    margin-bottom: 12px;
+}
+
+.radioGroup {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.radioLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #111111;
+}
+
+.radioInput {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #423DF9;
+    -webkit-appearance: radio;
+    appearance: radio;
+    margin: 0;
+}
+
+.radioInput:checked {
+    accent-color: #423DF9;
+}
+
+.radioLabel span {
+    user-select: none;
+}
+
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .headerTitle {

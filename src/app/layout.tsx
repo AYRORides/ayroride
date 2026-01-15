@@ -10,28 +10,28 @@ const openSans = Open_Sans({
 });
 
 export const metadata = {
-  title: "PikUP – Earn Rewards for Referrals",
-  description: "Join the PikUP affiliate waitlist, refer friends & earn exciting rewards. Download app and get a chance to win exclusive prizes!",
+  title: "Ayro – Earn Rewards for Referrals",
+  description: "Join the Ayro affiliate waitlist, refer friends & earn exciting rewards. Download app and get a chance to win exclusive prizes!",
   metadataBase: new URL("https://pikup.us"),
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://pikup.us",
-    siteName: "PikUP",
-    title: "PikUP",
+    siteName: "Ayro",
+    title: "Ayro",
     description: "Ridesharing means better pay and safety.",
     images: [
       {
         url: "/assets/OG.png",
         width: 1200,
         height: 630,
-        alt: "PikUP - Ridesharing Reinvented",
+        alt: "Ayro - Ridesharing Reinvented",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PikUP",
+    title: "Ayro",
     description: "Ridesharing means better pay and safety.",
     images: ["/assets/OG.png"],
     creator: "@pikup26698",
