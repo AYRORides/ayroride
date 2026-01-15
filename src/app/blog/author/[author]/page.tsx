@@ -20,7 +20,7 @@ export async function generateMetadata({
         {
           url: "https://ayrorides.com/assets/OG.png",
           width: 1200,
-          height: 631,
+          height: 630,
           alt: "ayrorides.com",
         },
       ],
