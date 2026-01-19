@@ -7,6 +7,11 @@ import styles from './Header.module.css';
 
 export default function Header() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+<<<<<<< Updated upstream
+=======
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+>>>>>>> Stashed changes
   const pathname = usePathname();
 
   const toggleMenu = () => {
@@ -37,18 +42,65 @@ export default function Header() {
             <li className={styles.navItem}>
               <Link href="/services" className={pathname === '/services' ? styles.active : ''}>Services</Link>
             </li>
+<<<<<<< Updated upstream
             <li className={styles.navItem}>
               <Link href="/blog" className={pathname === '/blog' ? styles.active : ''}>Blog</Link>
             </li>
             <li className={styles.navItem}>
               <Link href="/contact-us" className={pathname === '/contact-us' ? styles.active : ''}>Contact Us</Link>
+=======
+
+            {/* Resources Dropdown */}
+            <li
+              className={`${styles.navItem} ${styles.dropdown}`}
+              onMouseEnter={() => setIsResourcesOpen(true)}
+              onMouseLeave={() => setIsResourcesOpen(false)}
+            >
+              <span className={styles.dropdownToggle}>Resources</span>
+              {isResourcesOpen && (
+                <ul className={styles.dropdownMenu}>
+                  <li>
+                    <Link href="/blog">Blog</Link>
+                  </li>
+                </ul>
+              )}
+            </li>
+
+            {/* Company Dropdown */}
+            <li
+              className={`${styles.navItem} ${styles.dropdown}`}
+              onMouseEnter={() => setIsCompanyOpen(true)}
+              onMouseLeave={() => setIsCompanyOpen(false)}
+            >
+              <span className={styles.dropdownToggle}>Company</span>
+
+              {isCompanyOpen && (
+                <ul className={styles.dropdownMenu}>
+                  <li>
+                    <Link href="/about-us">About Us</Link>
+                  </li>
+                  <li>
+                    <Link href="/contact-us">Contact</Link>
+                  </li>
+                </ul>
+              )}
+>>>>>>> Stashed changes
             </li>
           </ul>
           <Link href="/join-our-waitlist" className={styles.waitlistBtn}>Join Our Waitlist</Link>
         </nav>
 
         {/* Mobile Toggle */}
+<<<<<<< Updated upstream
         <button className={`${styles.mobileToggle} ${isMobileOpen ? styles.open : ''}`} onClick={toggleMenu} aria-label="Toggle menu">
+=======
+        <button
+          className={`${styles.mobileToggle} ${isMobileOpen ? styles.open : ""
+            }`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+>>>>>>> Stashed changes
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>
@@ -58,11 +110,75 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       <div className={`${styles.mobileMenu} ${isMobileOpen ? styles.open : ''}`}>
         <ul className={styles.navLinks}>
+<<<<<<< Updated upstream
           <li className={styles.navItem}><Link href="/" onClick={toggleMenu}>Home</Link></li>
           <li className={styles.navItem}><Link href="/about-us" onClick={toggleMenu}>About Us</Link></li>
           <li className={styles.navItem}><Link href="/services" onClick={toggleMenu}>Services</Link></li>
           <li className={styles.navItem}><Link href="/blog" onClick={toggleMenu}>Blog</Link></li>
           <li className={styles.navItem}><Link href="/contact-us" onClick={toggleMenu}>Contact Us</Link></li>
+=======
+          <li className={styles.navItem}>
+            <Link href="/" onClick={toggleMenu}>
+              Home
+            </Link>
+          </li>
+
+          <li className={styles.navItem}>
+            <Link href="/about-us" onClick={toggleMenu}>
+              About Us
+            </Link>
+          </li>
+
+          <li className={styles.navItem}>
+            <Link href="/services" onClick={toggleMenu}>
+              Services
+            </Link>
+          </li>
+
+          {/* Mobile Resources Dropdown */}
+          <li className={styles.navItem}>
+            <button
+              className={styles.mobileDropdownToggle}
+              onClick={() => setIsResourcesOpen(!isResourcesOpen)}
+            >
+              Resources
+            </button>
+            {isResourcesOpen && (
+              <ul className={styles.mobileSubMenu}>
+                <li>
+                  <Link href="/blog" onClick={toggleMenu}>
+                    Blog
+                  </Link>
+                </li>
+              </ul>
+            )}
+          </li>
+
+          {/* Mobile Company Dropdown */}
+          <li className={styles.navItem}>
+            <button
+              className={styles.mobileDropdownToggle}
+              onClick={() => setIsCompanyOpen(!isCompanyOpen)}
+            >
+              Company
+            </button>
+
+            {isCompanyOpen && (
+              <ul className={styles.mobileSubMenu}>
+                <li>
+                  <Link href="/about-us" onClick={toggleMenu}>
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact-us" onClick={toggleMenu}>
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            )}
+          </li>
+>>>>>>> Stashed changes
         </ul>
         <Link href="/join-our-waitlist" className={styles.waitlistBtn} onClick={toggleMenu}>Join Our Waitlist</Link>
       </div>
