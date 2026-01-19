@@ -34,10 +34,10 @@ export default function Header() {
               <Link href="/" className={pathname === '/' ? styles.active : ''}>Home</Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="/about-us" className={pathname === '/about-us' ? styles.active : ''}>About Us</Link>
+              <Link href="/rider" className={pathname === '/rider' ? styles.active : ''}>Rider</Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="/services" className={pathname === '/services' ? styles.active : ''}>Services</Link>
+              <Link href="/driver" className={pathname === '/driver' ? styles.active : ''}>Driver</Link>
             </li>
 
             {/* Resources Dropdown */}
@@ -102,14 +102,14 @@ export default function Header() {
           </li>
 
           <li className={styles.navItem}>
-            <Link href="/about-us" onClick={toggleMenu}>
-              About Us
+            <Link href="/rider" onClick={toggleMenu}>
+              Rider
             </Link>
           </li>
 
           <li className={styles.navItem}>
-            <Link href="/services" onClick={toggleMenu}>
-              Services
+            <Link href="/driver" onClick={toggleMenu}>
+              Driver
             </Link>
           </li>
 
