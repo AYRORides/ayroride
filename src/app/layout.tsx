@@ -13,6 +13,9 @@ export const metadata = {
   title: "AYRO – Earn Rewards for Referrals",
   description: "Join the AYRO affiliate waitlist, refer friends & earn exciting rewards. Download app and get a chance to win exclusive prizes!",
   metadataBase: new URL("https://ayrorides.com"),
+  icons: {
+    icon: '/images/favicon.svg',
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

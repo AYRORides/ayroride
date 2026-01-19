@@ -146,12 +146,12 @@ export default function ReferAndEarn() {
                   <input
                     type="radio"
                     name="userType"
-                    value="Rider & Driver"
-                    checked={formData.userType === "Rider & Driver"}
+                    value="Both"
+                    checked={formData.userType === "Both"}
                     onChange={handleChange}
                     className={styles.radioInput}
                   />
-                  <span>Rider & Driver</span>
+                  <span>Both</span>
                 </label>
               </div>
             </div>

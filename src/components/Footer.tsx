@@ -68,8 +68,7 @@ export default function Footer() {
                   <Link href="/contact-us">Contact Us</Link>
                 </li>
               </ul>
-              <div className={styles.socialIcons}>
-                {/* Facebook */}
+              {/* <div className={styles.socialIcons}>
                 <a href="#" target="_blank" rel="noopener noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +84,6 @@ export default function Footer() {
                   </svg>
                 </a>
 
-                {/* Instagram (Colorful) */}
                 <a href="#" target="_blank" rel="noopener noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -176,7 +174,6 @@ export default function Footer() {
                   </svg>
                 </a>
 
-                {/* X / Twitter */}
                 <a href="#" target="_blank" rel="noopener noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -194,7 +191,6 @@ export default function Footer() {
                   </svg>
                 </a>
 
-                {/* Youtube */}
                 <a href="#" target="_blank" rel="noopener noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -209,7 +205,7 @@ export default function Footer() {
                     />
                   </svg>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
 
