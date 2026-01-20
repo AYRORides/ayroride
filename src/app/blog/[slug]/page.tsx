@@ -48,9 +48,11 @@ export default async function BlogPost({
     <>
       {/* Hero Section */}
       <section className={styles.blogHero}>
-        <h1 className={styles.heroTitle}>
-          Our <span>Blogs</span>
-        </h1>
+        <section className={styles.blogHero}>
+          <h2 className={styles.heroTitle}>
+            Our <span>Blogs</span>
+          </h2>
+        </section>
       </section>
 
       {/* Two-Tone Divider */}

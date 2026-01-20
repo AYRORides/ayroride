@@ -213,7 +213,7 @@ export default function Footer() {
 
           <div className={styles.footerBottom}>
             <p className={styles.copyrightText}>
-              Copyright AYRO 2025. All Rights Reserved.
+              Copyright AYRO 2026. All Rights Reserved.
             </p>
             <div className={styles.legalLinks}>
               <Link href="/terms-of-service">Terms of Service</Link>
