@@ -69,6 +69,12 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Script id="referralhero-global" strategy="afterInteractive" dangerouslySetInnerHTML={{
+          __html: `!function(m,a,i,t,r,e){if(m.RH)return;r=m.RH={},r.uuid=t,r.loaded=0,r.base_url=i,r.queue=[],m.rht=function(){r.queue.push(arguments)};e=a.getElementsByTagName('script')[0],c=a.createElement('script');c.async=!0,c.src='https://referralhero-global-code.s3.amazonaws.com/production/'+t+'.js',e.parentNode.insertBefore(c,e)}(window,document,'https://app.referralhero.com','RH0d3a5b93dd');`
+        }} />
+        <Script id="zoho-pagesense" strategy="afterInteractive" dangerouslySetInnerHTML={{
+          __html: `(function(w,s){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://cdn.pagesense.io/js/pikupinc/8d7816e424414c6aa3dc73e841dac36b.js";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(e,x);})(window,"script");`
+        }} />
         <Script id="zohodeskasap" strategy="afterInteractive" dangerouslySetInnerHTML={{
           __html: `
             var d=document;

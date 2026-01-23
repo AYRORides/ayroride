@@ -105,7 +105,7 @@
 .formWrapper {
     width: 100%;
     max-width: 691px;
-    border: 2px solid #423DF9;
+    /* border: 2px solid #423DF9; */
     border-radius: 37px;
     padding: 31px;
     background-color: #FFFFFF;

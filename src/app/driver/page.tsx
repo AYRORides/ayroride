@@ -1,29 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./rider.module.css";
+import styles from "./driver.module.css";
 import TestimonialsSlider from "@/components/TestimonialsSlider";
 import ReferAndEarn from "@/components/ReferAndEarn";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata = {
-    title: "Rider - AYRO",
+    title: "Driver - AYRO",
     description: "Ride-sharing without surge pricing or security worries. Pay fairly, every ride.",
     openGraph: {
-        title: "Rider - AYRO",
+        title: "Driver - AYRO",
         description: "Ride-sharing without surge pricing or security worries. Pay fairly, every ride.",
-        url: "https://ayrorides.com/rider/",
+        url: "https://ayrorides.com/driver/",
         images: [
             {
                 url: "/assets/OG.png",
                 width: 1200,
                 height: 630,
-                alt: "AYRO Rider",
+                alt: "AYRO Driver",
             },
         ],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Rider - AYRO",
+        title: "Driver - AYRO",
         description: "Pay fairly, every ride. No surge pricing surprises.",
     },
 };
@@ -35,23 +35,30 @@ export default function Rider() {
             <section className={styles.heroSection}>
                 <div className={styles.heroContainer}>
                     <div className={styles.heroContent}>
-                        <span className={styles.topTag}>RIDE WITH AYRO</span>
+                        <span className={styles.topTag}>DRIVE WITH AYRO</span>
                         <h1 className={styles.heroTitle}>
-                            <span className={styles.highlightText}>Ride-sharing</span> without surge <br />
-                            pricing or security worries.
+                            <span className={styles.highlightText}>AYRO</span> treats its drivers <br />
+                            like partners
                         </h1>
                         <p className={styles.heroSubtitle}>
-                            Ready for lower fares and safer rides?
+                            Guaranteed $30+ per active hour. Tips are extra. <br />
+                            <span style={{ fontSize: '0.9em', opacity: 0.9, display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: '10px', marginTop: '10px' }}>
+                                <span>Apply easily</span>
+                                <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#08D9C4', display: 'inline-block' }}></span>
+                                <span>Get treated fairly</span>
+                                <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#08D9C4', display: 'inline-block' }}></span>
+                                <span>Earn what you deserve</span>
+                            </span>
                         </p>
                         <Link href="/join-our-waitlist">
                             <button className={styles.ctaButton}>
-                                Join Our Waitlist
+                                Apply to drive
                             </button>
                         </Link>
                     </div>
                     <div className={styles.heroImageContainer}>
                         <Image
-                            src="/images/girl-banner.png"
+                            src="/images/driver/driver-hero-new.png"
                             alt="Ride with AYRO"
                             width={1000}
                             height={500}
@@ -67,35 +74,39 @@ export default function Rider() {
                 <div className={styles.whyContent}>
                     <div className={styles.contentWrapper}>
                         <h2 className={styles.whyTitle}>
-                            Why Riders Are <br />
+                            Why Drivers Are <br />
                             Choosing AYRO
                         </h2>
                         <p className={styles.whySubtitle}>
-                            Ride-sharing shouldn't feel stressful <br />
-                            <b>AYRO keeps it simple, safe, and affordable.</b>
+                            Ride-sharing is broken for drivers. <br />
+                            <b>AYRO is fixing it.</b>
                         </p>
 
                         <h3 className={styles.featuresTitle}>What Makes AYRO Different</h3>
 
                         <ul className={styles.featureList}>
                             <li className={styles.featureItem}>
-                                <span className={styles.featureHeading}>Upfront Pricing</span>
+                                <span className={styles.featureHeading}>No Surge Pricing Games</span>
                                 <p className={styles.featureDesc}>
-                                    See your fare before booking. No surge spikes. No
-                                    surprises at the end of the ride.
+                                    Know what you'll earn before the ride starts. Every time.
                                 </p>
                             </li>
                             <li className={styles.featureItem}>
-                                <span className={styles.featureHeading}>Reliable Rides</span>
+                                <span className={styles.featureHeading}>Fair, Predictable Pay</span>
                                 <p className={styles.featureDesc}>
-                                    Enjoy consistent availability and security.
+                                    No sudden rate drops. No unexplained deductions.
                                 </p>
                             </li>
                             <li className={styles.featureItem}>
-                                <span className={styles.featureHeading}>Fair for Everyone</span>
+                                <span className={styles.featureHeading}>Driver-First Platform</span>
                                 <p className={styles.featureDesc}>
-                                    Drivers earn fairly, which leads to better service and
-                                    better rides for you.
+                                    Built with driver feedback, not investor pressure.
+                                </p>
+                            </li>
+                            <li className={styles.featureItem}>
+                                <span className={styles.featureHeading}>Radical Transparency</span>
+                                <p className={styles.featureDesc}>
+                                    Clear fares. Clear rules. No surprises.
                                 </p>
                             </li>
                         </ul>
@@ -103,8 +114,8 @@ export default function Rider() {
                 </div>
                 <div className={styles.whyImageSide}>
                     <Image
-                        src="/images/why-riders.png"
-                        alt="Rider enjoying a ride"
+                        src="/images/driver/why-drivers-new.png"
+                        alt="Driver in car"
                         fill
                         className={styles.whyImage}
                     />
@@ -115,17 +126,17 @@ export default function Rider() {
             <section className={styles.howItWorksSection}>
                 <div className={styles.worksHeader}>
                     <h2 className={styles.worksTitle}>
-                        How Riding with <span className={styles.highlightText}>AYRO Works</span>
+                        How Driving with <span className={styles.highlightText}>AYRO Works</span>
                     </h2>
                     <p className={styles.worksSubtitle}>
-                        Simple. Transparent. Stress-free.
+                        Simple. Honest. Driver-first.
                     </p>
                 </div>
 
                 <div className={styles.worksImageContainer}>
                     <Image
-                        src="/images/rider/rider-timeline-new.png"
-                        alt="How riding with AYRO works diagram"
+                        src="/images/driver/driver-timeline-new.png"
+                        alt="How driving with AYRO works"
                         width={1000}
                         height={800}
                         className={styles.worksImage}
@@ -135,30 +146,23 @@ export default function Rider() {
                 <div className={styles.mobileWorksContainer}>
                     <div className={styles.mobileStepCard}>
                         <span className={styles.mobileStepNumber}>STEP 01</span>
-                        <h3 className={styles.mobileStepTitle}>Join the Waitlist</h3>
+                        <h3 className={styles.mobileStepTitle}>Apply and get verified</h3>
                         <p className={styles.mobileStepDesc}>
-                            Sign up to get early access to AYRO and be among the first riders on the platform.
+                            Sign up as a driver to get early access.
                         </p>
                     </div>
                     <div className={styles.mobileStepCard}>
                         <span className={styles.mobileStepNumber}>STEP 02</span>
-                        <h3 className={styles.mobileStepTitle}>Know What You'll Pay</h3>
+                        <h3 className={styles.mobileStepTitle}>Activate your account</h3>
                         <p className={styles.mobileStepDesc}>
-                            View your total fare before you book. No surge pricing. No hidden fees.
+                            Unlock early access rewards and priority onboarding.
                         </p>
                     </div>
                     <div className={styles.mobileStepCard}>
                         <span className={styles.mobileStepNumber}>STEP 03</span>
-                        <h3 className={styles.mobileStepTitle}>Book and Ride</h3>
+                        <h3 className={styles.mobileStepTitle}>Drive and earn fairly</h3>
                         <p className={styles.mobileStepDesc}>
-                            Confirm your ride and get picked up by a verified driver.
-                        </p>
-                    </div>
-                    <div className={styles.mobileStepCard}>
-                        <span className={styles.mobileStepNumber}>STEP 04</span>
-                        <h3 className={styles.mobileStepTitle}>Tell Your Friends</h3>
-                        <p className={styles.mobileStepDesc}>
-                            Invite them to experience safer, more affordable ride-sharing with AYRO.
+                            Earn consistent income without surge manipulation.
                         </p>
                     </div>
                 </div>
@@ -187,7 +191,7 @@ export default function Rider() {
                     </div>
                     <div className={styles.rewardsImageSide}>
                         <Image
-                            src="/images/referral-rewards.png"
+                            src="/images/driver/driver-rewards-new.png"
                             alt="Rider working in car"
                             fill
                             className={styles.rewardsImage}
@@ -200,25 +204,25 @@ export default function Rider() {
             <section className={styles.lifeBetterSection}>
                 <div className={styles.lifeBetterHeader}>
                     <h2 className={styles.lifeBetterTitle}>
-                        Built to make <span className={styles.lifeBetterHighlight}>your life better</span>
+                        Built for <span className={styles.lifeBetterHighlight}>Drivers,</span> not corporate shareholders
                     </h2>
-                    <p className={styles.lifeBetterSubtitle}>Not to make investors richer</p>
+                    <p className={styles.lifeBetterSubtitle}>At AYRO, you're not a gig worker. You're a partner.</p>
                 </div>
 
                 <div className={styles.featuresGrid}>
                     <div className={styles.featureCard}>
                         <div className={styles.featureIconWrapper}>
                             <Image
-                                src="/images/rider/Frame 1410121245.png"
-                                alt="Lower Prices"
+                                src="/images/driver/icon-transparent-earnings.png"
+                                alt="Transparent Earnings"
                                 width={48}
                                 height={48}
                                 className={styles.featureIcon}
                             />
                         </div>
-                        <h3 className={styles.featureCardTitle}>Lower Prices</h3>
+                        <h3 className={styles.featureCardTitle}>Transparent Earnings</h3>
                         <p className={styles.featureCardDesc}>
-                            AYRO's rates are up to 50% lower <br /> than other big ride-sharing services.
+                            See exactly what you'll earn before <br /> accepting a ride. No hidden <br /> deductions. No last-minute changes.
                         </p>
                         <div className={styles.featureCardLine}></div>
                     </div>
@@ -226,16 +230,16 @@ export default function Rider() {
                     <div className={styles.featureCard}>
                         <div className={styles.featureIconWrapper}>
                             <Image
-                                src="/images/rider/Frame 1410121245 (1).png"
+                                src="/images/driver/Frame 1410121245 (1).png"
                                 alt="Predictable Fares"
                                 width={48}
                                 height={48}
                                 className={styles.featureIcon}
                             />
                         </div>
-                        <h3 className={styles.featureCardTitle}>Predictable Fares</h3>
+                        <h3 className={styles.featureCardTitle}>Predictable Pay</h3>
                         <p className={styles.featureCardDesc}>
-                            Our fares stay consistent, even <br /> during peak hours. No surge pricing <br /> or waiting for prices to drop.
+                            No surge manipulation or sudden <br /> drops. Just consistent, reliable <br /> earnings you can count on.
                         </p>
                         <div className={styles.featureCardLine}></div>
                     </div>
@@ -243,16 +247,16 @@ export default function Rider() {
                     <div className={styles.featureCard}>
                         <div className={styles.featureIconWrapper}>
                             <Image
-                                src="/images/rider/Frame 1410121245 (2).png"
-                                alt="Stress-free Rides"
+                                src="/images/driver/icon-driver-control.png"
+                                alt="Driver Control"
                                 width={48}
                                 height={48}
                                 className={styles.featureIcon}
                             />
                         </div>
-                        <h3 className={styles.featureCardTitle}>Stress-free Rides</h3>
+                        <h3 className={styles.featureCardTitle}>Driver Control</h3>
                         <p className={styles.featureCardDesc}>
-                            From booking to drop-off, our goal is <br /> to make your trip convenient and <br /> worry-free.
+                            You choose when to go online, which <br /> rides to accept, and how you drive. <br /> You stay in control.
                         </p>
                         <div className={styles.featureCardLine}></div>
                     </div>
@@ -260,16 +264,16 @@ export default function Rider() {
                     <div className={styles.featureCard}>
                         <div className={styles.featureIconWrapper}>
                             <Image
-                                src="/images/rider/Frame 1410121245 (3).png"
-                                alt="Fair Driver Treatment"
+                                src="/images/driver/icon-fair-treatment.png"
+                                alt="Fair Treatment"
                                 width={48}
                                 height={48}
                                 className={styles.featureIcon}
                             />
                         </div>
-                        <h3 className={styles.featureCardTitle}>Fair Driver Treatment</h3>
+                        <h3 className={styles.featureCardTitle}>Fair Treatment</h3>
                         <p className={styles.featureCardDesc}>
-                            Drivers are paid fairly, which leads to <br /> better service and a more respectful <br /> ride experience.
+                            AYRO is built on values like respect, <br /> fairness, and long-term trust.
                         </p>
                         <div className={styles.featureCardLine}></div>
                     </div>
@@ -277,16 +281,16 @@ export default function Rider() {
                     <div className={styles.featureCard}>
                         <div className={styles.featureIconWrapper}>
                             <Image
-                                src="/images/rider/Frame 1410121245 (4).png"
-                                alt="Trip Tracking"
+                                src="/images/driver/icon-real-support.png"
+                                alt="Real Human Support"
                                 width={48}
                                 height={48}
                                 className={styles.featureIcon}
                             />
                         </div>
-                        <h3 className={styles.featureCardTitle}>Trip Tracking</h3>
+                        <h3 className={styles.featureCardTitle}>Real Human Support</h3>
                         <p className={styles.featureCardDesc}>
-                            Every ride is tracked, so your journey <br /> is monitored from pickup to drop- <br /> off.
+                            Get help from real people when you <br /> need it. No endless loops. No <br /> automated runarounds.
                         </p>
                         <div className={styles.featureCardLine}></div>
                     </div>
@@ -294,23 +298,23 @@ export default function Rider() {
                     <div className={styles.featureCard}>
                         <div className={styles.featureIconWrapper}>
                             <Image
-                                src="/images/rider/Frame 1410121245 (5).png"
-                                alt="Same-Gender Driver Option"
+                                src="/images/driver/icon-same-gender.png"
+                                alt="Same-Gender Ride Preferences"
                                 width={48}
                                 height={48}
                                 className={styles.featureIcon}
                             />
                         </div>
-                        <h3 className={styles.featureCardTitle}>Same-Gender Driver Option</h3>
+                        <h3 className={styles.featureCardTitle}>Same-Gender Ride Preferences</h3>
                         <p className={styles.featureCardDesc}>
-                            Choose a same-gender driver when <br /> available, for added comfort and <br /> peace of mind.
+                            Some riders may choose a same- <br /> gender driver preference. When <br /> available, these requests are clearly <br /> shown before you accept a ride, so <br /> you stay informed and in control.
                         </p>
                         <div className={styles.featureCardLine}></div>
                     </div>
                 </div>
 
                 <Link href="/join-our-waitlist">
-                    <button className={styles.lifeBetterCta}>Join Our Waitlist</button>
+                    <button className={styles.lifeBetterCta}>Apply to drive</button>
                 </Link>
             </section>
 
@@ -318,47 +322,51 @@ export default function Rider() {
             <section className={styles.safetySection}>
                 <div className={styles.safetyContainer}>
                     <h2 className={styles.safetyTitle}>
-                        Rider <span>Safety and Trust</span>
+                        Driver <span>Safety and Trust</span>
                     </h2>
+                    <p className={styles.safetySubtitle} style={{ textAlign: 'center', maxWidth: '700px', margin: '1rem auto', color: '#fff', opacity: 0.9 }}>
+                        Join our movement to disrupt the ride-share industry and create fair, <br />
+                        wallet-friendly transportation for all.
+                    </p>
 
                     <div className={styles.safetyGrid}>
                         <div className={styles.safetyItem}>
                             <Image
-                                src="/images/rider/Frame 1410121245 (6).png"
+                                src="/images/driver/Frame 1410121245 (6).png"
                                 alt="Verified Drivers"
                                 width={80}
                                 height={80}
                                 className={styles.safetyIcon}
                             />
-                            <h3>Verified Drivers</h3>
+                            <h3>Verified Riders</h3>
                             <p>
-                                Every driver is verified before joining the platform.
+                                Every rider is verified before they ride, <br /> reducing fake accounts and unsafe <br /> situations.
                             </p>
                         </div>
                         <div className={styles.safetyItem}>
                             <Image
-                                src="/images/rider/Frame 1410121246.png"
+                                src="/images/driver/Frame 1410121246.png"
                                 alt="In-App Safety Features"
                                 width={80}
                                 height={80}
                                 className={styles.safetyIcon}
                             />
-                            <h3>In-App Safety Features</h3>
+                            <h3>In-App Emergency Support</h3>
                             <p>
-                                Emergency support and trip sharing are built directly into the AYRO app.
+                                Quick access to emergency help during <br /> active trips, directly inside the AYRO app.
                             </p>
                         </div>
                         <div className={styles.safetyItem}>
                             <Image
-                                src="/images/rider/Frame 1410121247.png"
+                                src="/images/driver/Frame 1410121247.png"
                                 alt="Trip Tracking"
                                 width={80}
                                 height={80}
                                 className={styles.safetyIcon}
                             />
-                            <h3>Trip Tracking</h3>
+                            <h3>Transparent Trip Records</h3>
                             <p>
-                                We monitor your ride from pickup to drop-off with clear trip records and accountability.
+                                Every trip is logged clearly, creating accountability and trust for both drivers and riders.
                             </p>
                         </div>
                     </div>
@@ -366,6 +374,10 @@ export default function Rider() {
             </section>
 
             {/* Built to Make Your Life Better Section */}
+
+
+
+
 
             {/* Testimonials Section */}
             <TestimonialsSlider />

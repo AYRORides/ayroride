@@ -16,11 +16,11 @@ export default function Footer() {
           <div className={styles.ctaSection}>
             <div className={styles.ctaContent}>
               <h2 className={styles.ctaTitle}>
-                Ready To Disrupt Ride-Sharing Status Quo?
+                Ready To Disrupt the Ride-Sharing Status Quo?
               </h2>
               <p className={styles.ctaSubtitle}>
                 Be an early adopter and earn rewards while helping to make
-                ride-sharing more fairer for everyone.
+                ride-sharing fairer for everyone.
               </p>
               <Link href="/join-our-waitlist">
                 <button className={styles.ctaBtn}>Join Our Waitlist</button>
