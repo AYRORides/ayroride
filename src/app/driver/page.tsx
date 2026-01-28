@@ -383,7 +383,7 @@ export default function Rider() {
             <TestimonialsSlider />
 
             {/* Refer and Earn Section */}
-            <ReferAndEarn />
+            {/* <ReferAndEarn /> */}
 
             {/* FAQ Section */}
             <FAQAccordion />

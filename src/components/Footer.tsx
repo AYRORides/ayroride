@@ -68,8 +68,8 @@ export default function Footer() {
                   <Link href="/contact-us">Contact Us</Link>
                 </li>
               </ul>
-              {/* <div className={styles.socialIcons}>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+              <div className={styles.socialIcons}>
+                <a href="https://www.facebook.com/profile.php?id=61583870717780" target="_blank" rel="noopener noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"
@@ -84,7 +84,7 @@ export default function Footer() {
                   </svg>
                 </a>
 
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/ayro.rideshare/" target="_blank" rel="noopener noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"
@@ -174,7 +174,7 @@ export default function Footer() {
                   </svg>
                 </a>
 
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://x.com/pikup26698" target="_blank" rel="noopener noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"
@@ -191,7 +191,7 @@ export default function Footer() {
                   </svg>
                 </a>
 
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/@AYRO_Inc" target="_blank" rel="noopener noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="27"
@@ -205,7 +205,7 @@ export default function Footer() {
                     />
                   </svg>
                 </a>
-              </div> */}
+              </div>
             </div>
           </div>
 

@@ -46,7 +46,12 @@ export default function Header() {
               onMouseEnter={() => setIsResourcesOpen(true)}
               onMouseLeave={() => setIsResourcesOpen(false)}
             >
-              <span className={styles.dropdownToggle}>Resources</span>
+              <span className={styles.dropdownToggle}>
+                Resources
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.dropdownArrow}>
+                  <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
               {isResourcesOpen && (
                 <ul className={styles.dropdownMenu}>
                   <li>
@@ -62,7 +67,12 @@ export default function Header() {
               onMouseEnter={() => setIsCompanyOpen(true)}
               onMouseLeave={() => setIsCompanyOpen(false)}
             >
-              <span className={styles.dropdownToggle}>Company</span>
+              <span className={styles.dropdownToggle}>
+                Company
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.dropdownArrow}>
+                  <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
 
               {isCompanyOpen && (
                 <ul className={styles.dropdownMenu}>
@@ -123,6 +133,16 @@ export default function Header() {
               onClick={() => setIsResourcesOpen(!isResourcesOpen)}
             >
               Resources
+              <svg
+                width="10"
+                height="6"
+                viewBox="0 0 10 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className={`${styles.dropdownArrow} ${isResourcesOpen ? styles.rotate : ''}`}
+              >
+                <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
             </button>
             {isResourcesOpen && (
               <ul className={styles.mobileSubMenu}>
@@ -142,6 +162,16 @@ export default function Header() {
               onClick={() => setIsCompanyOpen(!isCompanyOpen)}
             >
               Company
+              <svg
+                width="10"
+                height="6"
+                viewBox="0 0 10 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className={`${styles.dropdownArrow} ${isCompanyOpen ? styles.rotate : ''}`}
+              >
+                <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
             </button>
 
             {isCompanyOpen && (

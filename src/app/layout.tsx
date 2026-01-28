@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Script from "next/script";
+import ReferralModal from "@/components/ReferralModal";
+import { ModalProvider } from "@/context/ModalContext";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -66,9 +68,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${openSans.variable} ${openSans.className}`} suppressHydrationWarning>
-        <Header />
-        {children}
-        <Footer />
+        <ModalProvider>
+          <Header />
+          {children}
+          <Footer />
+          <ReferralModal />
+        </ModalProvider>
         <Script id="referralhero-global" strategy="afterInteractive" dangerouslySetInnerHTML={{
           __html: `!function(m,a,i,t,r,e){if(m.RH)return;r=m.RH={},r.uuid=t,r.loaded=0,r.base_url=i,r.queue=[],m.rht=function(){r.queue.push(arguments)};e=a.getElementsByTagName('script')[0],c=a.createElement('script');c.async=!0,c.src='https://referralhero-global-code.s3.amazonaws.com/production/'+t+'.js',e.parentNode.insertBefore(c,e)}(window,document,'https://app.referralhero.com','RH0d3a5b93dd');`
         }} />

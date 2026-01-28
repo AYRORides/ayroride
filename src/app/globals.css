@@ -163,5 +163,6 @@ body {
     font-size: 14px;
   }
 }
+
 /* Hide ReferralHero Global Popup */
-iframe#referralhero-iframe-popup, .referralhero-popup-container, div[id^='referralhero-iframe-popup'], iframe[src*='referralhero.com/embed/popup'] { display: none !important; visibility: hidden !important; pointer-events: none !important; }
+/* iframe#referralhero-iframe-popup, .referralhero-popup-container, div[id^='referralhero-iframe-popup'], iframe[src*='referralhero.com/embed/popup'] { display: none !important; visibility: hidden !important; pointer-events: none !important; } */
