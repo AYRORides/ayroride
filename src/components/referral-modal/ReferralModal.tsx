@@ -21,7 +21,7 @@ export default function ReferralModal() {
             />
 
             {/* Modal Container */}
-            <div className="relative bg-white rounded-[2.5rem] shadow-[0_45px_100px_-20px_rgba(0,0,0,0.4)] w-[80vw] md:w-full max-w-5xl overflow-hidden flex flex-col md:flex-row h-auto max-h-[70vh] animate-in fade-in zoom-in duration-500">
+            <div className={`relative bg-white rounded-[2.5rem] shadow-[0_45px_100px_-20px_rgba(0,0,0,0.4)] w-[80vw] md:w-full overflow-hidden flex flex-col md:flex-row h-auto max-h-[70vh] md:!max-h-[85vh] min-[1401px]:max-h-[70vh] animate-in fade-in zoom-in duration-500 ${styles.modalContainer}`}>
 
                 {/* Close Button */}
                 <button
@@ -68,7 +68,7 @@ export default function ReferralModal() {
                 </div>
 
                 {/* Right Side */}
-                <div className="flex-1 w-full flex flex-col h-full bg-white relative">
+                <div className={`flex-1 w-full flex flex-col h-full bg-white relative ${styles.modalRightCol}`}>
 
                     {/* Mobile Header */}
                     <div className="md:hidden bg-[#423DF9] pt-10 pb-10 px-8 text-center relative overflow-hidden flex flex-col items-center shrink-0">
@@ -80,27 +80,26 @@ export default function ReferralModal() {
                             className="brightness-0 invert object-contain mb-6 opacity-90"
                         />
                         <h2 className="text-xl sm:text-2xl font-black text-white leading-tight tracking-tight">Get your Referral Link</h2>
-                        <p className="text-white/60 text-sm sm:text-base mt-2 mb-3">Join the AYRO waitlist</p>
+                        <p className="text-white/60 text-sm sm:text-base mt-2 !mb-8">Join the AYRO waitlist</p>
                     </div>
 
                     {/* Mobile spacer */}
                     <div className="md:hidden h-4 bg-white shrink-0" />
 
-                    {/* Top spacer to create visual breathing room (Desktop) */}
                     <div className="hidden md:block h-16 lg:h-20 shrink-0" />
 
                     <div className={`flex-1 overflow-y-auto ${styles.customScrollbar} flex flex-col`}>
                         {/* Content Wrapper */}
-                        <div className="flex-grow w-full flex flex-col items-center justify-start pt-4 md:pt-12 pb-4 md:pb-16 px-4 md:px-12 relative z-10">
+                        <div className={`flex-grow w-full flex flex-col items-center px-4 md:!px-8 relative z-10 ${styles.modalContentWrapper}`}>
                             {/* Header */}
-                            <div className="hidden md:block mb-8 w-full max-w-[440px]">
-                                <span className="inline-block text-[10px] font-black uppercase tracking-[0.3em] text-[#423DF9] mb-3">
+                            <div className={`hidden md:block mb-8 md:!mb-2 min-[1401px]:mb-8 w-full max-w-[440px] ${styles.desktopHeader}`}>
+                                <span className="inline-block text-[10px] font-black uppercase tracking-[0.3em] text-[#423DF9] mb-3 md:!mb-1">
                                     Exclusive Access
                                 </span>
-                                <h3 className="text-[2rem] lg:text-[2.25rem] font-extrabold text-[#0A0A0B] tracking-tight leading-[1.05]">
+                                <h3 className="text-[2rem] md:!text-xl font-extrabold text-[#0A0A0B] tracking-tight leading-[1.05]">
                                     Get your <span className="text-[#423DF9]">Referral Link</span>
                                 </h3>
-                                <p className="mt-4 text-gray-500 text-[0.95rem] font-medium leading-relaxed">
+                                <p className="mt-4 md:!mt-1 text-gray-500 !mb-4 md:!mb-2 text-[0.95rem] md:!text-xs font-medium leading-relaxed">
                                     Please fill in your details below to join the waitlist and start earning rewards.
                                 </p>
                             </div>

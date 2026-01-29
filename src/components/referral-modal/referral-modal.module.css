@@ -31,7 +31,6 @@
 }
 
 :global(#mtr-form) {
-    /* Basic reset to ensure it fits our container */
     max-width: 100% !important;
     width: 100% !important;
 }
@@ -43,12 +42,13 @@
     display: none !important;
 }
 
-/* Status Message - Keep it centered if it appears */
-/* Status Message - Keep it centered if it appears */
+
 :global(#mtr-form-status-container) {
     text-align: center !important;
     font-size: 14px !important;
 }
+
+
 
 /* Mobile: Remove widget card styling (border/padding) to prevent 'sticking' and double-card effect */
 @media (max-width: 768px) {
@@ -57,5 +57,156 @@
         padding: 0 !important;
         background-color: transparent !important;
         box-shadow: none !important;
+    }
+}
+
+/* 
+   Aggressive Compact Mode for Laptops (Default 1366x768 / 1280x800)
+   Overrides the inline styles from the referral widget
+*/
+@media (min-width: 769px) and (max-width: 1400px) {
+
+    /* Force the form container to be compact */
+    :global(#mtr-form) {
+        padding: 12px 16px !important;
+        /* Further reduced from 16px */
+        margin: 0 auto !important;
+        /* Ensure the border is visible by creating space if needed, though simpler is better */
+    }
+
+    /* Shrink all inputs and selects to be very compact */
+    :global(#mtr-form input),
+    :global(#mtr-form select),
+    :global(#mtr-form input[type="text"]),
+    :global(#mtr-form input[type="email"]),
+    :global(#mtr-form input[type="tel"]) {
+        height: 32px !important;
+        /* Reduced from 36px */
+        font-size: 12px !important;
+        /* Smaller font */
+        padding-left: 8px !important;
+        margin-bottom: 0 !important;
+        border-radius: 6px !important;
+    }
+
+    /* Shrink the Join Button */
+    :global(#mtr-form button[type="submit"]),
+    :global(#mtr-form input[type="submit"]) {
+        height: 36px !important;
+        /* Reduced from 40px */
+        font-size: 13px !important;
+        margin-top: 6px !important;
+        padding: 0 !important;
+        border-radius: 6px !important;
+    }
+
+    /* Tighten spacing between rows significantly */
+    :global(#mtr-form .mtr-form-field),
+    :global(#mtr-form-fields > div),
+    :global(#mtr-form-option-field) {
+        margin-bottom: 6px !important;
+        /* Reduced from 8px */
+    }
+
+    /* Phone number row adjustments */
+    :global(.mtr-flex.phone-num-row) {
+        gap: 6px !important;
+        margin-bottom: 6px !important;
+    }
+
+    /* Phone number specific fields within row */
+    :global(.phone-num-row > div) {
+        margin-bottom: 0 !important;
+    }
+
+    /* Labels */
+    :global(#mtr-form label) {
+        font-size: 11px !important;
+        margin-bottom: 1px !important;
+    }
+
+    /* Hide any extra spacers if they exist */
+    :global(.spacer) {
+        display: none !important;
+    }
+}
+
+/* 
+   RESPONSIVE MODAL LAYOUT CLASSES
+   Moved from Tailwind to ensure precise media query behavior 
+*/
+
+/* The Main Modal Container */
+.modalContainer {
+    /* Base/Mobile/Small Laptop: Slightly smaller max-width */
+    max-width: 56rem;
+    /* equivalent to max-w-4xl */
+}
+
+/* Desktop (>1400px): Restore original wide size */
+@media (min-width: 1401px) {
+    .modalContainer {
+        max-width: 64rem;
+        /* equivalent to max-w-5xl */
+    }
+}
+
+/* The Right Column (White Card) */
+.modalRightCol {
+    /* Base/Mobile/Small-Laptop: No negative margin overlap */
+    margin-top: 0 !important;
+}
+
+/* Desktop (>1400px): Restore the negative margin overlap */
+@media (min-width: 1401px) {
+    .modalRightCol {
+        /* This pulls the column up relative to the left column */
+        margin-top: -60px !important;
+    }
+}
+
+/* The Content Wrapper inside Right Column */
+.modalContentWrapper {
+    /* Base: Center content vertically for small screens */
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Desktop (>1400px): Restore top alignment and padding */
+@media (min-width: 1401px) {
+    .modalContentWrapper {
+        justify-content: flex-start;
+        padding-top: 3rem;
+        /* pt-12 */
+        padding-bottom: 4rem;
+        /* pb-16 */
+        padding-left: 3rem;
+        /* px-12 */
+        padding-right: 3rem;
+    }
+}
+
+/* Desktop Header Formatting (Restore large text/margins) */
+.desktopHeader {
+    /* Base/Small Laptop values (Compact) are handled by Tailwind classes in the TSX currently, 
+       but we can enforce desktop overrides here if needed */
+}
+
+@media (min-width: 1401px) {
+    .desktopHeader h3 {
+        font-size: 2.25rem !important;
+        /* text-4xl / 2.25rem */
+    }
+
+    .desktopHeader p {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+        font-size: 0.95rem !important;
+    }
+
+    .desktopHeader span {
+        margin-bottom: 0.75rem !important;
+        /* mb-3 */
     }
 }
