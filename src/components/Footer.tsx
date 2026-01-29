@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import styles from "./Footer.module.css";
 import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoYoutube } from "react-icons/io5";
@@ -73,13 +74,13 @@ export default function Footer() {
 
 
                 <a href="https://www.instagram.com/ayro.rideshare/" target="_blank" rel="noopener noreferrer">
-                  <IoLogoInstagram size={32} color="#08D9C4" />
+                  <Image src="/assets/instagram-icon.png" alt="Instagram" width={32} height={32} />
                 </a>
 
 
 
                 <a href="https://www.youtube.com/@AYRO_Inc" target="_blank" rel="noopener noreferrer">
-                  <IoLogoYoutube size={32} color="#08D9C4" />
+                  <Image src="/assets/youtube-icon.png" alt="YouTube" width={32} height={32} />
                 </a>
               </div>
             </div>

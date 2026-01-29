@@ -1,4 +1,5 @@
 import ContactForm from "./ContactFormClient";
+import Image from "next/image";
 import styles from "./contact-us.module.css";
 import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoYoutube } from "react-icons/io5";
 
@@ -95,11 +96,11 @@ export default function Contact() {
               <div className={styles.socialIcons}>
 
                 <a href="https://www.instagram.com/ayro.rideshare/" target="_blank" className={styles.socialIcon}>
-                  <IoLogoInstagram size={32} color="#08D9C4" />
+                  <Image src="/assets/instagram-icon.png" alt="Instagram" width={32} height={32} />
                 </a>
 
                 <a href="https://www.youtube.com/@AYRO_Inc" target="_blank" className={styles.socialIcon}>
-                  <IoLogoYoutube size={32} color="#08D9C4" />
+                  <Image src="/assets/youtube-icon.png" alt="YouTube" width={32} height={32} />
                 </a>
               </div>
             </div>
