@@ -59,7 +59,7 @@ export default function Home() {
           <div className={styles.promoText}>
             <h1>
               <span className={styles.mainHead}>AYRO </span>
-              <span className={styles.sharingText}>RIDE SHARING MEANS</span>
+              <span className={styles.sharingText}>RideShare MEANS</span>
               <span className={styles.blueText}>{displayText}</span>
             </h1>
             <p>Join our waitlist. Refer your friends. Win valuable prizes.</p>
@@ -70,7 +70,7 @@ export default function Home() {
           <div className={styles.promoImageContainer}>
             <img
               src="/images/promo-bg.png"
-              alt="AYRO ridesharing"
+              alt="AYRO RideShare"
               className={styles.promoImage}
             />
           </div>
@@ -98,8 +98,8 @@ export default function Home() {
               AYRO IS FIXING <br className={styles.mobileBreak} />
               EVERYTHING{" "}
               <span>
-                you hate <br className={styles.mobileBreak} /> about
-                ridesharing.
+                You hate <br className={styles.mobileBreak} /> about
+                ride-sharing.
               </span>
             </h2>
             <p className={styles.subHeading}>
@@ -110,7 +110,7 @@ export default function Home() {
               Imagine predictable, affordable fares and increased security.
             </p>
             <p className={styles.boldDescription}>
-              It's ridesharing reinvented.
+              It’s ride-sharing reinvented.
             </p>
             <Link href="/join-our-waitlist">
               <button className={styles.waitlistBtn}>Join Our Waitlist</button>
@@ -136,11 +136,11 @@ export default function Home() {
               </li>
               <li className={styles.featureListItem}>
                 <span className={styles.featureCircle}></span>
-                No more surprises on surges
+                No more surprise surges
               </li>
               <li className={styles.featureListItem}>
                 <span className={styles.featureCircle}></span>
-                Predictable consistent fares
+                Predictable, consistent fares
               </li>
             </ul>
           </div>
@@ -180,15 +180,15 @@ export default function Home() {
             <ul className={styles.featureList}>
               <li className={styles.featureListItem}>
                 <span className={styles.featureCircle}></span>
-                Safety first rideshare
+                Safety-first ride-sharing
               </li>
               <li className={styles.featureListItem}>
                 <span className={styles.featureCircle}></span>
-                Dashcam equipped rides
+                Dashcam-equipped rides
               </li>
               <li className={styles.featureListItem}>
                 <span className={styles.featureCircle}></span>
-                Finger print logins
+                Fingerprint logins
               </li>
             </ul>
           </div>
@@ -252,13 +252,13 @@ export default function Home() {
             <h2>
               <span className={styles.topLine}>Get rewarded for joining</span>
               <span className={styles.blueSpan}>
-                <span style={{ color: "#1D0652" }}>the</span> Rideshare{" "}
+                <span style={{ color: "#1D0652" }}>the</span> RideShare{" "}
                 <br className={styles.mobileBreak} /> Revolution
               </span>
             </h2>
             <p className={styles.rewardDescription}>
               Join the AYRO waitlist now, and you'll unlock your unique referral
-              link and to get updates about our launch in early 2026.
+              link and receive updates about our launch in early 2026.
             </p>
             <p
               className={`${styles.rewardDescription} ${styles.rewardShareLine}`}
@@ -266,7 +266,7 @@ export default function Home() {
               Then, share that link with friends to win prizes:
             </p>
             <span className={styles.rewardHighlight}>
-              $1,000 cash, ride credits, or a MacBook Pro.
+              $1,000 Cash, Ride Credits, or a MacBook Pro.
             </span>
             <Link href="/join-our-waitlist">
               <button className={styles.waitlistBtn}>Join Our Waitlist</button>

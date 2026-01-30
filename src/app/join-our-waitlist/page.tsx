@@ -31,7 +31,7 @@ export default function JoinOurWaitlist() {
                         Get Early <span>Access</span>
                     </h2>
                     <p className={styles.formSubtitle}>
-                        Be the first to experience the future of ridesharing.
+                        Be the first to experience the future of ride-sharing.
                         Sign up now to get exclusive updates and priority access.
                     </p>
 

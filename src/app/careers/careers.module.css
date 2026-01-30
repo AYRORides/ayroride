@@ -1,0 +1,330 @@
+/* Hero Section */
+.heroSection {
+    background: linear-gradient(180deg, #1D0652 0%, #0a0320 100%);
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px 80px;
+    flex-direction: column;
+}
+
+.heroContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0;
+}
+
+.heroTitle {
+    font-family: "Open Sans", Sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 82px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.heroSubtitle {
+    font-family: "Open Sans", Sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 82px;
+    color: #423DF9;
+    margin: 0;
+}
+
+/* Two Color Divider */
+.sectionDivider {
+    height: 8px;
+    width: 100%;
+    display: flex;
+    background-color: #3F3FFF;
+    position: relative;
+}
+
+.sectionDivider::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: calc(50% - 558px);
+    background-color: #00D1C1;
+    z-index: 1;
+}
+
+.dividerContainer {
+    max-width: 1240px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.dividerTeal {
+    flex: 5;
+    background-color: #00D1C1;
+}
+
+.dividerBlue {
+    flex: 95;
+    background-color: #3F3FFF;
+}
+
+/* Openings Section */
+.openingSection {
+    padding: 80px 20px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    gap: 40px;
+}
+
+/* Header Content */
+.headerContent {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.openingTitle {
+    font-family: "Open Sans", Sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 48px;
+    color: #423DF9;
+    margin: 0 0 20px 0;
+}
+
+.openingDescription {
+    font-family: "Open Sans", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    color: #111111BF;
+    margin: 0;
+    max-width: 760px;
+}
+
+/* Controls Section (Search & Filter) */
+.controlsContainer {
+    display: flex;
+    justify-content: center;
+    /* Changed from space-between to center */
+    align-items: center;
+    width: 100%;
+    max-width: 1240px;
+    margin-bottom: 20px;
+    gap: 16px;
+    /* Reduced gap slightly for "together" look */
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 16px;
+    height: 52px;
+    /* Slightly taller to match screenshot */
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    /* Lighter border */
+    border-radius: 8px;
+    /* Slightly more rounded */
+    flex: 0 1 500px;
+}
+
+.searchInput {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 16px;
+    color: #333;
+    background: transparent;
+}
+
+.searchInput::placeholder {
+    color: #9CA3AF;
+    /* Lighter placeholder text */
+}
+
+.searchIcon {
+    font-size: 20px;
+    color: #6B7280;
+}
+
+.filterGroup {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sortByBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    /* Match search bar */
+    border-radius: 8px;
+    /* Match search bar */
+    padding: 0 20px;
+    height: 52px;
+    /* Match search bar */
+    font-family: "Open Sans", Sans-serif;
+    font-size: 15px;
+    color: #555;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Job Cards Grid */
+.jobGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.jobCard {
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: #fff;
+    /* Removed hover transform/shadow transition */
+    height: 100%;
+}
+
+/* Removed .jobCard:hover styles */
+
+.jobTitle {
+    font-family: "Open Sans", Sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1D0652;
+    margin: 0 0 16px 0;
+}
+
+.jobDesc {
+    font-family: "Open Sans", Sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0 0 24px 0;
+    flex: 1;
+}
+
+.jobMeta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 14px;
+    color: #555;
+}
+
+.metaIcon {
+    font-size: 18px;
+    color: #423DF9;
+}
+
+/* Job Footer (Price & Button) */
+.jobFooter {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #F3F4F6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.jobSalary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+}
+
+.salaryIcon {
+    color: #423DF9;
+    font-size: 18px;
+}
+
+.applyBtn {
+    background-color: #423DF9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+.applyBtn:hover {
+    background-color: #3632cf;
+}
+
+@media (max-width: 1024px) {
+    .jobGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .controlsContainer {
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+    }
+
+    .searchBar {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: none;
+    }
+
+    .filterGroup {
+        justify-content: space-between;
+    }
+
+    .jobGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .heroSection {
+        min-height: 350px;
+        padding: 100px 20px 80px;
+    }
+}

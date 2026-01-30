@@ -37,7 +37,7 @@ export default function Rider() {
                     <div className={styles.heroContent}>
                         <span className={styles.topTag}>RIDE WITH AYRO</span>
                         <h1 className={styles.heroTitle}>
-                            <span className={styles.highlightText}>Ride-sharing</span> without surge <br />
+                            <span className={styles.highlightText}>Rideshare</span> without surge <br />
                             pricing or security worries.
                         </h1>
                         <p className={styles.heroSubtitle}>
@@ -78,6 +78,12 @@ export default function Rider() {
                         <h3 className={styles.featuresTitle}>What Makes AYRO Different</h3>
 
                         <ul className={styles.featureList}>
+                            <li className={styles.featureItem}>
+                                <span className={styles.featureHeading}>No Surge Pricing Games</span>
+                                <p className={styles.featureDesc}>
+                                    Fares up to 50% lower, No surge pricing ever and Enhanced security features.
+                                </p>
+                            </li>
                             <li className={styles.featureItem}>
                                 <span className={styles.featureHeading}>Upfront Pricing</span>
                                 <p className={styles.featureDesc}>
@@ -170,7 +176,6 @@ export default function Rider() {
                     <div className={styles.rewardsContentSide}>
                         <div className={styles.rewardsContentWrapper}>
                             <h2 className={styles.rewardsTitle}>Earn Rewards by Growing the Movement</h2>
-                            <span className={styles.rewardsTag}>Driver Referral Rewards</span>
                             <p className={styles.rewardsDesc}>
                                 Invite riders and drivers to join AYRO and earn real rewards.
                             </p>
@@ -181,7 +186,7 @@ export default function Rider() {
                                 <li className={styles.rewardsItem}>Referral dashboard to track earnings</li>
                             </ul>
                             <button className={styles.rewardsButton}>
-                                Help grow AYRO. Share in the rewards.
+                                Join the waitlist
                             </button>
                         </div>
                     </div>
@@ -202,7 +207,7 @@ export default function Rider() {
                     <h2 className={styles.lifeBetterTitle}>
                         Built to make <span className={styles.lifeBetterHighlight}>your life better</span>
                     </h2>
-                    <p className={styles.lifeBetterSubtitle}>Not to make investors richer</p>
+                    <p className={styles.lifeBetterSubtitle}>Zero Surge Price ever, Lower Fare for Riders</p>
                 </div>
 
                 <div className={styles.featuresGrid}>

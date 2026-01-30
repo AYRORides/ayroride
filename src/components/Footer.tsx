@@ -17,8 +17,11 @@ export default function Footer() {
         <section className={styles.ctaContainer}>
           <div className={styles.ctaSection}>
             <div className={styles.ctaContent}>
-              <h2 className={styles.ctaTitle}>
-                Ready To Disrupt the Ride-Sharing Status Quo?
+              <h2
+                className={styles.ctaTitle}
+                style={{ whiteSpace: "nowrap", textTransform: "none" }}
+              >
+                Ready to Disrupt the Ride-Sharing Status Quo?
               </h2>
               <p className={styles.ctaSubtitle}>
                 Be an early adopter and earn rewards while helping to make
@@ -71,14 +74,15 @@ export default function Footer() {
                 </li>
               </ul>
               <div className={styles.socialIcons}>
-
-
+                <a href="https://www.facebook.com/profile.php?id=61583870717780" target="_blank" rel="noopener noreferrer">
+                  <Image src="/assets/facebook-icon.png" alt="Facebook" width={32} height={32} />
+                </a>
+                <a href="https://x.com/ayro_inc" target="_blank" rel="noopener noreferrer">
+                  <Image src="/assets/x-icon.jpg" alt="X" width={32} height={32} style={{ borderRadius: '4px' }} />
+                </a>
                 <a href="https://www.instagram.com/ayro.rideshare/" target="_blank" rel="noopener noreferrer">
                   <Image src="/assets/instagram-icon.png" alt="Instagram" width={32} height={32} />
                 </a>
-
-
-
                 <a href="https://www.youtube.com/@AYRO_Inc" target="_blank" rel="noopener noreferrer">
                   <Image src="/assets/youtube-icon.png" alt="YouTube" width={32} height={32} />
                 </a>

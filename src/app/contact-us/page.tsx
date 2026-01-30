@@ -59,8 +59,8 @@ export default function Contact() {
           <div className={styles.infoTextSide}>
             <h3 className={styles.infoTitle}>Contact <span className={styles.tealText}>Information</span></h3>
             <p className={styles.infoDesc}>
-              AYRO is building a fair and transparent ride share system that protects both riders and drivers.
-              No surge pricing, no surprises. Our referral program rewards Early Adopters for helping us grow
+              AYRO is building a fair and transparent ride-share system that protects both riders and drivers.
+              No surge pricing, no surprises. Our referral program rewards Early Adopters for building
               a community where riders pay less and drivers earn what they deserve.
             </p>
 
@@ -70,7 +70,7 @@ export default function Contact() {
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><path fillRule="evenodd" clipRule="evenodd" d="M15.0157 29.512C15.0157 29.512 5.33301 21.3573 5.33301 13.3333C5.33301 10.5043 6.45681 7.79121 8.4572 5.79082C10.4576 3.79043 13.1707 2.66663 15.9997 2.66663C18.8287 2.66663 21.5418 3.79043 23.5421 5.79082C25.5425 7.79121 26.6663 10.5043 26.6663 13.3333C26.6663 21.3573 16.9837 29.512 16.9837 29.512C16.445 30.008 15.5583 30.0026 15.0157 29.512ZM15.9997 18C16.6125 18 17.2193 17.8793 17.7855 17.6447C18.3517 17.4102 18.8662 17.0665 19.2995 16.6331C19.7328 16.1998 20.0766 15.6853 20.3111 15.1191C20.5456 14.553 20.6663 13.9461 20.6663 13.3333C20.6663 12.7205 20.5456 12.1136 20.3111 11.5474C20.0766 10.9813 19.7328 10.4668 19.2995 10.0335C18.8662 9.60012 18.3517 9.25638 17.7855 9.02186C17.2193 8.78733 16.6125 8.66663 15.9997 8.66663C14.762 8.66663 13.575 9.15829 12.6998 10.0335C11.8247 10.9086 11.333 12.0956 11.333 13.3333C11.333 14.571 11.8247 15.758 12.6998 16.6331C13.575 17.5083 14.762 18 15.9997 18Z" fill="#08D9C4"></path></svg>
                   <span>Location</span>
                 </div>
-                <p className={`${styles.infoText} ${styles.locationText}`}>8911 North Captial of Texas Highway, Suite 4200. #1007, Austin - TX -78759.</p>
+                <p className={`${styles.infoText} ${styles.locationText}`}>8911 North Capital of Texas Highway, Suite 4200. #1007, Austin - TX -78759.</p>
               </div>
 
               <div className={styles.infoItem}>
@@ -94,6 +94,14 @@ export default function Contact() {
               <h4>Social Contact</h4>
 
               <div className={styles.socialIcons}>
+
+                <a href="https://www.facebook.com/profile.php?id=61583870717780" target="_blank" className={styles.socialIcon}>
+                  <Image src="/assets/facebook-icon.png" alt="Facebook" width={32} height={32} />
+                </a>
+
+                <a href="https://x.com/ayro_inc" target="_blank" className={styles.socialIcon}>
+                  <Image src="/assets/x-icon.jpg" alt="X" width={32} height={32} style={{ borderRadius: '4px' }} />
+                </a>
 
                 <a href="https://www.instagram.com/ayro.rideshare/" target="_blank" className={styles.socialIcon}>
                   <Image src="/assets/instagram-icon.png" alt="Instagram" width={32} height={32} />

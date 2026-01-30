@@ -10,18 +10,22 @@ import styles from "./referral-modal.module.css";
 export default function ReferralModal() {
     const { isModalOpen, closeModal } = useModal();
 
-    if (!isModalOpen) return null;
+    // if (!isModalOpen) return null; // Removed to allow preloading
 
     return (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-10">
+        <div
+            className={`fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-10 transition-opacity duration-300 ${isModalOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                }`}
+        >
             {/* Backdrop */}
             <div
-                className="absolute inset-0 bg-[#0A0A0B]/80 backdrop-blur-md transition-opacity"
+                className="absolute inset-0 bg-[#0A0A0B]/80 backdrop-blur-md"
                 onClick={closeModal}
             />
 
             {/* Modal Container */}
-            <div className={`relative bg-white rounded-[2.5rem] shadow-[0_45px_100px_-20px_rgba(0,0,0,0.4)] w-[80vw] md:w-full overflow-hidden flex flex-col md:flex-row h-auto max-h-[70vh] md:!max-h-[85vh] min-[1401px]:max-h-[70vh] animate-in fade-in zoom-in duration-500 ${styles.modalContainer}`}>
+            <div className={`relative bg-white rounded-[2.5rem] shadow-[0_45px_100px_-20px_rgba(0,0,0,0.4)] w-[80vw] md:w-full overflow-hidden flex flex-col md:flex-row h-auto max-h-[70vh] md:!max-h-[85vh] min-[1401px]:max-h-[70vh] transition-all duration-500 ease-out ${isModalOpen ? "scale-100 opacity-100 translate-y-0" : "scale-95 opacity-0 translate-y-4"
+                } ${styles.modalContainer}`}>
 
                 {/* Close Button */}
                 <button

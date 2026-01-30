@@ -677,6 +677,7 @@
   font-weight: 800;
   line-height: 50px;
   margin-bottom: 20px;
+  white-space: nowrap;
 }
 
 .futureTitle span {

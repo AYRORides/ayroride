@@ -37,8 +37,8 @@ export default function Rider() {
                     <div className={styles.heroContent}>
                         <span className={styles.topTag}>DRIVE WITH AYRO</span>
                         <h1 className={styles.heroTitle}>
-                            <span className={styles.highlightText}>AYRO</span> treats its drivers <br />
-                            like partners
+                            <span className={styles.highlightText}>AYRO</span> Treats Its Drivers <br />
+                            Like Partners
                         </h1>
                         <p className={styles.heroSubtitle}>
                             Guaranteed $30+ per active hour. Tips are extra. <br />
@@ -47,12 +47,12 @@ export default function Rider() {
                                 <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#08D9C4', display: 'inline-block' }}></span>
                                 <span>Get treated fairly</span>
                                 <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#08D9C4', display: 'inline-block' }}></span>
-                                <span>Earn what you deserve</span>
+                                <span>Earn, what you deserve</span>
                             </span>
                         </p>
                         <Link href="/join-our-waitlist">
                             <button className={styles.ctaButton}>
-                                Apply to drive
+                                Apply to Drive
                             </button>
                         </Link>
                     </div>
@@ -74,27 +74,27 @@ export default function Rider() {
                 <div className={styles.whyContent}>
                     <div className={styles.contentWrapper}>
                         <h2 className={styles.whyTitle}>
-                            Why Drivers Are <br />
-                            Choosing AYRO
+                            Why are Drivers <br />
+                            Choosing AYRO?
                         </h2>
                         <p className={styles.whySubtitle}>
                             Ride-sharing is broken for drivers. <br />
                             <b>AYRO is fixing it.</b>
                         </p>
 
-                        <h3 className={styles.featuresTitle}>What Makes AYRO Different</h3>
+                        <h3 className={styles.featuresTitle}>What Makes AYRO Different?</h3>
 
                         <ul className={styles.featureList}>
                             <li className={styles.featureItem}>
-                                <span className={styles.featureHeading}>No Surge Pricing Games</span>
+                                <span className={styles.featureHeading}>$30+/Hour Guaranteed Earnings</span>
                                 <p className={styles.featureDesc}>
                                     Know what you'll earn before the ride starts. Every time.
                                 </p>
                             </li>
                             <li className={styles.featureItem}>
-                                <span className={styles.featureHeading}>Fair, Predictable Pay</span>
+                                <span className={styles.featureHeading}>Fair for Everyone</span>
                                 <p className={styles.featureDesc}>
-                                    No sudden rate drops. No unexplained deductions.
+                                    Drivers earn fairly, which leads to better service and better rides for you.
                                 </p>
                             </li>
                             <li className={styles.featureItem}>
@@ -104,9 +104,9 @@ export default function Rider() {
                                 </p>
                             </li>
                             <li className={styles.featureItem}>
-                                <span className={styles.featureHeading}>Radical Transparency</span>
+                                <span className={styles.featureHeading}>AYRO treats its drivers right.</span>
                                 <p className={styles.featureDesc}>
-                                    Clear fares. Clear rules. No surprises.
+                                    Steady, reliable income, flexible schedule. Start driving with dignity.
                                 </p>
                             </li>
                         </ul>
@@ -126,7 +126,7 @@ export default function Rider() {
             <section className={styles.howItWorksSection}>
                 <div className={styles.worksHeader}>
                     <h2 className={styles.worksTitle}>
-                        How Driving with <span className={styles.highlightText}>AYRO Works</span>
+                        How Driving with <span className={styles.highlightText}>AYRO Works?</span>
                     </h2>
                     <p className={styles.worksSubtitle}>
                         Simple. Honest. Driver-first.
@@ -204,7 +204,7 @@ export default function Rider() {
             <section className={styles.lifeBetterSection}>
                 <div className={styles.lifeBetterHeader}>
                     <h2 className={styles.lifeBetterTitle}>
-                        Built for <span className={styles.lifeBetterHighlight}>Drivers,</span> not corporate shareholders
+                        Built for <span className={styles.lifeBetterHighlight}>Drivers,</span> Not Corporate Shareholders
                     </h2>
                     <p className={styles.lifeBetterSubtitle}>At AYRO, you're not a gig worker. You're a partner.</p>
                 </div>
@@ -314,7 +314,7 @@ export default function Rider() {
                 </div>
 
                 <Link href="/join-our-waitlist">
-                    <button className={styles.lifeBetterCta}>Apply to drive</button>
+                    <button className={styles.lifeBetterCta}>Apply to Drive</button>
                 </Link>
             </section>
 

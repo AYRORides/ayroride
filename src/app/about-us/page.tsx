@@ -96,18 +96,18 @@ export default function About() {
             <h2 className={styles.missionTitle}>
               AYRO Is What{" "}
               <span className={styles.missionTitleSpan}>
-                Ride-Sharing Ought to Be
+                Ride-Sharing Ought to Be?
               </span>
             </h2>
             <p className={styles.missionIntro}>
-              Here's how we're different than the big-name companies…
+              Here's how we're different from the big-name companies…
             </p>
 
             <div className={styles.benefitsStack}>
               <div className={styles.benefitBlock}>
                 <h4 className={styles.benefitTitle}>For Riders</h4>
                 <ul className={styles.benefitList}>
-                  <li>Fairer fares (up to 50% lower!)</li>
+                  <li>Fairer fares (up to 50% lower)</li>
                   <li>No surge pricing — ever</li>
                   <li>Greater safety in every ride</li>
                 </ul>
@@ -126,51 +126,27 @@ export default function About() {
               <span className={styles.mobileLine}>
                 More Than an App{" "}
                 <span className={styles.revolutionTitleSpan}>
-                  Ride — AYRO is
-                </span>
-              </span>{" "}
-              <span className={styles.mobileLine}>
-                <span className={styles.revolutionTitleSpan}>
-                  a revolution.
+                  Ride — AYRO is a Revolution.
                 </span>
               </span>
             </h3>
 
             <div className={styles.revolutionContent}>
               <p>
-                <span className={styles.mobileLine}>
-                  By riding with AYRO, you save money, and you{" "}
-                  <strong>join</strong>
-                </span>{" "}
-                <span className={styles.mobileLine}>
-                  <strong>a movement of fairness.</strong>
-                </span>
+                By riding with AYRO, you save money, and you{" "}
+                <strong>join a movement of fairness.</strong>
               </p>
               <p>
-                <span className={styles.mobileLine}>
-                  By encouraging others to join, you make life better
-                </span>{" "}
-                <span className={styles.mobileLine}>
-                  for them – and earn rewards in the process.
-                </span>
+                By encouraging others to join, you make life better for them - and
+                earn rewards in the process.
               </p>
               <p>
-                <span className={styles.mobileLine}>
-                  <strong>
-                    At AYRO, we believe ridesharing should be safe
-                  </strong>
-                </span>{" "}
-                <span className={styles.mobileLine}>
-                  <strong>and affordable, honest and human.</strong>
-                </span>
+                At <strong>AYRO</strong>, we believe <strong>ride-sharing</strong>{" "}
+                should be safe and affordable, <strong>honest</strong> and human.
               </p>
               <p>
-                <span className={styles.mobileLine}>
-                  With your help, that's the kind of movement we're
-                </span>{" "}
-                <span className={styles.mobileLine}>
-                  building – one ride at a time.
-                </span>
+                With your help, that's the kind of movement we're building - one
+                ride at a time.
               </p>
             </div>
           </div>

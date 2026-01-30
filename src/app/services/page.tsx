@@ -35,7 +35,7 @@ const features = [
         iconDefault: "/assets/Group-2-9.svg",
         iconHover: "/assets/Group-8-4.svg",
         title: "Ride Credits",
-        text: "Unlock exclusive ride credits as you climb our referral tiers, ensuring more affordable transportation for yourself and peers."
+        text: "Unlock exclusive ride credits as you climb our referral tiers, ensuring more affordable transportation for yourself and friends."
     },
     {
         iconDefault: "/assets/Group-3-5.svg",
@@ -52,7 +52,7 @@ const features = [
     {
         iconDefault: "/assets/Group-5-3.svg",
         iconHover: "/assets/Group-11-3.svg",
-        title: "Viral Dashboard",
+        title: "Referral Dashboard",
         text: "Access your personalized dashboard to track referrals, monitor rewards, and optimize your sharing strategy."
     },
     {
@@ -131,7 +131,7 @@ export default function Services() {
                     </h2>
                     <p className={styles.futureSubtitle}>
                         Join our movement to disrupt the ride-<br className={styles.mobileBreak} />
-                        share industry and create fair, affordable<br className={styles.mobileBreak} />
+                        share industry and create fair, affordable <br className={styles.mobileBreak} />
                         transportation for all.
                     </p>
 
@@ -178,7 +178,7 @@ export default function Services() {
             <section className={styles.testimonialSection}>
                 <div className={styles.testimonialContainer}>
                     <h2 className={styles.testimonialTitle}>
-                        What Our <span>Rebels Say</span>
+                        What Our <span>Members Say</span>
                     </h2>
                     <p className={styles.testimonialSubtitle}>Real stories from our movement</p>
 
